@@ -1468,26 +1468,10 @@ Reusable style section start
 }
 
 // Link end
-// Input box section start
-.input-box {
-    position: relative;
-    width: 100%;
 
-    .icon {
-        color: var(--heading-color);
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
 
-.input-box:not(:last-of-type) {
-    border-right: 1px solid var(--border-color1);
-    // border: none;
-}
 
-// Input box section end
+
 
 // Search box section start 
 .search-box {
@@ -1677,6 +1661,31 @@ Reusable style section start
         font-weight: 400;
     }
 
+    .input-box {
+        position: relative;
+        width: 100%;
+
+        .icon {
+            color: var(--heading-color);
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:not(:last-of-type) {
+
+            border-right: 1px solid var(--border-color1);
+        }
+
+        &.active {
+            .search-result {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
     .search-result {
         position: absolute;
         left: 0;
@@ -1690,15 +1699,21 @@ Reusable style section start
         color: var(--body-color);
         max-height: 346px;
         overflow: auto;
+        opacity: 0;
+        visibility: hidden;
+
         .search-item {
             padding: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
             line-height: 1.2;
+            cursor: pointer;
+
             &:hover {
                 background-color: var(--primary-color-opacity-low);
             }
+
             .icon-area {
                 font-size: 22px;
                 color: var(--primary-color);
@@ -1708,27 +1723,38 @@ Reusable style section start
                 align-items: center;
                 justify-content: center;
             }
+
             .img-area {
                 img {
                     width: 35px;
                     height: 35px;
+                    min-width: 35px;
                     border-radius: 3px;
                 }
             }
+
             .title {
                 font-size: 16px;
                 text-transform: capitalize;
                 color: var(--heading-color);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
             }
+
             .sub-title {
                 font-size: 12px;
                 text-transform: capitalize;
                 color: var(--heading-color);
             }
+
             &:not(:last-child) {
                 border-bottom: 1px solid var(--border-color1);
             }
         }
+
         .recent-clear {
             border-bottom: 1px solid var(--border-color1);
             padding: 10px;
@@ -1740,7 +1766,7 @@ Reusable style section start
             // color: var(--body-color);
         }
     }
-    
+
 
 }
 

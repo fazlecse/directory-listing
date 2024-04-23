@@ -1,4 +1,5 @@
 
+
 // Preloader area
 const preloader = document.getElementById("preloader");
 const preloaderFunction = () => {
@@ -189,35 +190,39 @@ $(document).ready(function () {
 
     // Fancybox carousel section start
     // Initialise Carousel
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-    });
+    if ($("#mainCarousel").length) {
+        const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+            Dots: false,
+        });
 
-    // Thumbnails
-    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-        Sync: {
-            target: mainCarousel,
-            friction: 0,
-        },
-        Dots: false,
-        Navigation: false,
-        center: true,
-        slidesPerPage: 1,
-        infinite: true,
-    });
+        // Thumbnails
+        const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+            Sync: {
+                target: mainCarousel,
+                friction: 0,
+            },
+            Dots: false,
+            Navigation: false,
+            center: true,
+            slidesPerPage: 1,
+            infinite: true,
+        });
 
-    // Customize Fancybox
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Carousel: {
-            on: {
-                change: (that) => {
-                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-                        friction: 0,
-                    });
+        // Customize Fancybox
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            Carousel: {
+                on: {
+                    change: (that) => {
+                        mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                            friction: 0,
+                        });
+                    },
                 },
             },
-        },
-    });
+        });
+    }
+
+
     // Fancybox carousel section end
 
 
@@ -252,100 +257,137 @@ function copyTextFunc() {
 // Copy text end
 
 // Social share start
-$("#shareBlock").socialSharingPlugin({
-    urlShare: window.location.href,
-    description: $("meta[name=description]").attr("content"),
-    title: $("title").text(),
-});
+if ($(".social-share-box").length) {
+    $("#shareBlock").socialSharingPlugin({
+        urlShare: window.location.href,
+        description: $("meta[name=description]").attr("content"),
+        title: $("title").text(),
+    });
+}
 // Social share end
 
 
 
 
 // Nice select start
-$('.nice-select').niceSelect();
+
+if ($(".nice-select").length) {
+    $('.nice-select').niceSelect();
+}
 // Nice select end
 
 // Range area start
-$(".js-range-slider").ionRangeSlider({
-    type: "double",
-    min: 0,
-    max: 100,
-    from: 800,
-    to: 500,
-    grid: true
-});
+if ($(".js-range-slider").length) {
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 100,
+        from: 800,
+        to: 500,
+        grid: true
+    });
+}
 // Range area end
 // International Telephone Input start
-const input = document.querySelector("#telephone");
-window.intlTelInput(input, {
-    initialCountry: "bd",
-    separateDialCode: true,
-});
-// International Telephone Input end
-// Dark theme start
-const toggleBtn = document.getElementById("toggle-btn");
-const body = document.querySelector("body");
-toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        localStorage.setItem("dark-theme", 1);
-    } else {
-        localStorage.setItem("dark-theme", 0);
-    }
-    setTheme();
-});
-
-function setTheme() {
-    const isDarkTheme = localStorage.getItem("dark-theme");
-    if (isDarkTheme == 1) {
-        document.querySelector('body').classList.add('dark-theme');
-        document.getElementById("moon").style.display = "none";
-        document.getElementById("sun").style.display = "block";
-    } else {
-        document.querySelector('body').classList.remove('dark-theme');
-        document.getElementById("moon").style.display = "block";
-        document.getElementById("sun").style.display = "none";
-    }
+if ($("#telephone").length) {
+    const input = document.querySelector("#telephone");
+    window.intlTelInput(input, {
+        initialCountry: "bd",
+        separateDialCode: true,
+    });
 }
-setTheme();
-// Dark theme end
+// International Telephone Input end
 
 
+// // Dropdown select with Filter start
+// const inputBox = document.querySelector('.input-box');
+// // const soValue = document.querySelector('.soValue');
+// const searchInput = document.querySelector('.search-input');
+// const searchItem = document.querySelectorAll('.search-item');
 
+// searchInput.addEventListener('click', function (event) {
+//     inputBox.classList.add('active');
+//     event.stopPropagation();
+// });
+
+// window.addEventListener('click', function () {
+//     inputBox.classList.remove('active');
+// });
+
+// searchItem.forEach(function (searchItemSingle) {
+//     searchItemSingle.addEventListener('click', function () {
+//         const text = searchItemSingle.querySelector(".title");
+//         const textContent = text.textContent;
+//         searchInput.value = textContent;
+//         inputBox.classList.remove('active');
+//     });
+// });
+
+function handleSelect(inputBox, searchInput, searchItem) {
+
+    searchInput.addEventListener('click', function (event) {
+        inputBox.classList.add('active');
+        event.stopPropagation();
+    });
+
+    window.addEventListener('click', function () {
+        inputBox.classList.remove('active');
+    });
+
+    searchItem.forEach(function (searchItemSingle) {
+        searchItemSingle.addEventListener('click', function () {
+            const text = searchItemSingle.querySelector(".title");
+            const textContent = text.textContent;
+            searchInput.value = textContent;
+            inputBox.classList.remove('active');
+        });
+    });
+}
+
+const inputBox = document.querySelector('#input-box');
+// const soValue = document.querySelector('#search-input');
+const searchInput = document.querySelector('#search-input');
+const searchItem = document.querySelectorAll('#search-result .search-item');
+handleSelect(inputBox, searchInput, searchItem);
+
+const inputBox2 = document.querySelector('#input-box2');
+// const soValue = document.querySelector('#search-input');
+const searchInput2 = document.querySelector('#search-input2');
+const searchItem2 = document.querySelectorAll('#search-result2 .search-item');
+handleSelect(inputBox2, searchInput2, searchItem2);
+
+// filter start 
+
+function filterItems(inputId, items) {
+    const input = document.getElementById(inputId);
+    const filter = input.value.toUpperCase();
+
+
+    items.forEach((item) => {
+        const title = item.querySelector(".title");
+        const txtValue = title.textContent || title.innerText;
+
+        if (txtValue.toUpperCase().includes(filter)) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+const filterSearchInputId = "search-input";
+const filterSearchInput = document.getElementById(filterSearchInputId);
+const items = document.querySelectorAll("#search-result .search-item");
+filterSearchInput.addEventListener("keyup", function () {
+    filterItems(filterSearchInputId, items);
+})
+
+const filterSearchInputId2 = "search-input2";
+const filterSearchInput2 = document.getElementById(filterSearchInputId2);
+const items2 = document.querySelectorAll("#search-result2 .search-item");
+filterSearchInput2.addEventListener("keyup", function () {
+    filterItems(filterSearchInputId2, items2);
+})
 // Dropdown select with Filter start
-const searchBox = document.querySelector('.search-box');
-const selectOption = document.querySelector('.select-option');
-const soValue = document.querySelector('.soValue');
-const optionSearch = document.querySelector('.optionSearch');
-const options = document.querySelector('.options');
-const optionsList = document.querySelectorAll('.options li');
 
-selectOption.addEventListener('click', function () {
-   searchBox.classList.toggle('active');
-});
 
-optionsList.forEach(function (optionsListSingle) {
-   optionsListSingle.addEventListener('click', function () {
-      const text = optionsListSingle.querySelector(".country");
-      const textContent = text.textContent;
-      soValue.value = textContent;
-      searchBox.classList.remove('active');
-   });
-});
 
-optionSearch.addEventListener('keyup', function () {
-   var filter, li, i, textValue;
-   filter = optionSearch.value.toUpperCase();
-   li = options.getElementsByTagName('li');
-   for (i = 0; i < li.length; i++) {
-      const liCount = li[i];
-      textValue = liCount.textContent || liCount.innerText;
-      if (textValue.toUpperCase().indexOf(filter) > -1) {
-         li[i].style.display = '';
-      } else {
-         li[i].style.display = 'none';
-      }
-   }
-});
-// Dropdown select with Filter start

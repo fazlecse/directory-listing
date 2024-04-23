@@ -246,96 +246,86 @@
                                         <div class="multiple-search-box-wrapper">
                                             <form class="multiple-search-box">
                                                 <div class="multiple-search-box-inner">
-                                                    <div class="input-box">
+                                                    <div class="input-box" id="input-box">
                                                         <div class="icon">
                                                             <i class="fa-regular fa-magnifying-glass"></i>
                                                         </div>
-                                                        <input type="text" class="form-control"
+                                                        <input type="text"  id="search-input" class="form-control soValue search-input" 
                                                             placeholder="What are you looking for...">
-                                                        <div class="search-result">
-                                                            <!-- <div class="recent-clear">
-                                                                <h6>Recent searches</h6>
-                                                                <a href="javascript:void(0)" class="clear-all">clear</a>
-                                                            </div> -->
-                                                            <a href="" class="search-item">
+                                                        <div class="search-result" id="search-result">
+                                                            <div class="search-item">
                                                                 <div class="icon-area">
                                                                     <i class="fa-regular fa-utensils"></i>
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">restaurent</div>
                                                                 </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="icon-area">
                                                                     <i class="fa-regular fa-person-walking"></i>
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">Fitness</div>
                                                                 </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="icon-area">
                                                                     <i class="fa-regular fa-bed"></i>
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">hotels</div>
                                                                 </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="icon-area">
                                                                     <i class="fa-regular fa-cart-shopping"></i>
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">shopping</div>
                                                                 </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="icon-area">
                                                                     <i class="fa-regular fa-bag-shopping"></i>
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">E-Commerce</div>
                                                                 </div>
-                                                            </a>
-                                                            <!-- <a href="" class="search-item">
-                                                                <div class="icon-area">
-                                                                    <i class="fa-light fa-location-dot"></i>
+                                                            </div>
+
+
+                                                            <div class="search-item">
+                                                                <div class="img-area">
+                                                                    <img src="./assets/img/search/hotel3-150x150.jpg"
+                                                                        alt="">
                                                                 </div>
                                                                 <div class="text-area">
-                                                                    <div class="title">bangladesh</div>
-                                                                    <span class="sub-title">bangladesh</span>
+                                                                    <div class="title">luxe horizon residences
+                                                                    </div>
 
                                                                 </div>
-                                                            </a> -->
-                                                            
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="img-area">
-                                                                    <img src="./assets/img/search/hotel3-150x150.jpg" alt="">
-                                                                </div>
-                                                                <div class="text-area">
-                                                                    <div class="title">luxe horizon residences 
-                                                                    </div>
-                                                                    <span class="sub-title">San Francisco</span>
-                                                                </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
-                                                                <div class="img-area">
-                                                                    <img src="./assets/img/search/Depositphotos_23639297_original-150x150.jpg" alt="">
+                                                                    <img src="./assets/img/search/Depositphotos_23639297_original-150x150.jpg"
+                                                                        alt="">
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">tadu ethiopian kitchen</div>
-                                                                    <span class="sub-title">thiland</span>
+
                                                                 </div>
-                                                            </a>
-                                                            <a href="" class="search-item">
+                                                            </div>
+                                                            <div class="search-item">
                                                                 <div class="img-area">
-                                                                    <img src="./assets/img/search/f9834a8300d9f442729fd86583a690d2_1486147624-150x150.jpg" alt="">
+                                                                    <img src="./assets/img/search/f9834a8300d9f442729fd86583a690d2_1486147624-150x150.jpg"
+                                                                        alt="">
                                                                 </div>
                                                                 <div class="text-area">
                                                                     <div class="title">doughnut plant boston</div>
-                                                                    <span class="sub-title">Boston</span>
+
                                                                 </div>
-                                                            </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="input-box">
@@ -356,12 +346,73 @@
 
                                                         </select>
                                                     </div>
-                                                    <div class="input-box">
+                                                    <div class="input-box" id="input-box2">
                                                         <div class="icon">
                                                             <i class="fa-regular fa-location-arrow"></i>
                                                         </div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="What are you looking for...">
+                                                        <input type="text"  id="search-input2" class="form-control"
+                                                            placeholder="Enter Location (e.g. USA)">
+                                                        <div id="search-result2" class="search-result search-result2">
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">bangladesh</div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">islamabad</div>
+                                                                    <span class="sub-title">pakistan</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">riadh</div>
+                                                                    <span class="sub-title">saudi arabia</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">bangladesh</div>
+                                                                    <span class="sub-title">bangladesh</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">dubai</div>
+                                                                    <span class="sub-title">UAE</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="search-item">
+                                                                <div class="icon-area">
+                                                                    <i class="fa-light fa-location-dot"></i>
+                                                                </div>
+                                                                <div class="text-area">
+                                                                    <div class="title">Boston</div>
+                                                                    <span class="sub-title">USA</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
                                                     <button type="button" class="multiple-search-btn">

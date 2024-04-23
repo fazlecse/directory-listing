@@ -1203,22 +1203,6 @@ Reusable style section start
   text-decoration: underline;
 }
 
-.input-box {
-  position: relative;
-  width: 100%;
-}
-.input-box .icon {
-  color: var(--heading-color);
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.input-box:not(:last-of-type) {
-  border-right: 1px solid var(--border-color1);
-}
-
 .search-box {
   position: relative;
   display: flex;
@@ -1366,6 +1350,24 @@ Reusable style section start
 .multiple-search-box .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-weight: 400;
 }
+.multiple-search-box .input-box {
+  position: relative;
+  width: 100%;
+}
+.multiple-search-box .input-box .icon {
+  color: var(--heading-color);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.multiple-search-box .input-box:not(:last-of-type) {
+  border-right: 1px solid var(--border-color1);
+}
+.multiple-search-box .input-box.active .search-result {
+  opacity: 1;
+  visibility: visible;
+}
 .multiple-search-box .search-result {
   position: absolute;
   left: 0;
@@ -1379,6 +1381,8 @@ Reusable style section start
   color: var(--body-color);
   max-height: 346px;
   overflow: auto;
+  opacity: 0;
+  visibility: hidden;
 }
 .multiple-search-box .search-result .search-item {
   padding: 10px;
@@ -1386,6 +1390,7 @@ Reusable style section start
   align-items: center;
   gap: 10px;
   line-height: 1.2;
+  cursor: pointer;
 }
 .multiple-search-box .search-result .search-item:hover {
   background-color: var(--primary-color-opacity-low);
@@ -1402,12 +1407,18 @@ Reusable style section start
 .multiple-search-box .search-result .search-item .img-area img {
   width: 35px;
   height: 35px;
+  min-width: 35px;
   border-radius: 3px;
 }
 .multiple-search-box .search-result .search-item .title {
   font-size: 16px;
   text-transform: capitalize;
   color: var(--heading-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
 }
 .multiple-search-box .search-result .search-item .sub-title {
   font-size: 12px;
