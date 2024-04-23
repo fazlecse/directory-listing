@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCraze</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick slider Css link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Nice select css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- Fancybox Css link -->
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <figure class="loader">
+            <div class="car">
+                <span class="body"></span>
+                <span class="wheels"></span>
+            </div>
+            <div class="strikes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </figure>
+    </div>
+    <!-- Preloader section end -->
+
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="CarCraze"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt="CarCraze"></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="listing.html">listing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <div class="language-box">
+                            <i class="fa-regular fa-coins"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>USD</option>
+                                <option value="1">EUR</option>
+                                <option value="2">bdt</option>
+                            </select>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="add-listing.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">add listing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="notification-panel">
+                            <button class="dropdown-toggle">
+                                <i class="fal fa-bell" aria-hidden="true"></i>
+                                <span class="count">3</span>
+                            </button>
+                            <ul class="notification-dropdown">
+                                <div class="dropdown-box">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">6 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">1 Day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">3 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="clear-all fixed-bottom">
+                                    <a href="">Clear all</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="CarCraze">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-section">
+        <div class="banner-section-inner">
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <div class="breadcrumb-area">
+                            <h3>pricing</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="fa-light fa-house"></i>
+                                        Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">pricing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Pricinig section start -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="row">
+                <div class="section-header text-center">
+                    <div class="section-subtitle">Pricing plan</div>
+                    <h2>Pricing Plan for listing</h2>
+                    <p class="cmn-para-text mx-auto">Here are the pricing plans for unlimited business car listings from
+                        the
+                        free
+                        plan to the
+                        Gold. You can buy whatever you like.</p>
+                </div>
+            </div>
+            <div class="row g-4 g-xl-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <div class="section-header">
+                            <div class="title-area">
+                                <div class="icon-area"><i class="fa-regular fa-leaf-maple"></i></div>
+                                <h3 class="title">Free</h3>
+                            </div>
+                            <p>Perfect to get start</p>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="title"><span class="price">$12</span> <span>/month</span></div>
+                            <ul class="pricing-feature">
+                                <li><i class="fa-regular fa-circle-check"></i>1 Listing Allowed</li>
+                                <li><i class="fa-regular fa-circle-check"></i>1 Amenities per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>2 Photos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>2 Videos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>2 Social Items per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>2 Additional Features per Listing</li>
+
+                                <li><i class="fa-regular fa-circle-xmark"></i>Featured Listing Not Allowed</li>
+                                <li><i class="fa-regular fa-circle-xmark"></i>Featured Listing Not Allowed</li>
+                            </ul>
+                            <div class="btn-area">
+                                <button type="button" class="cmn-btn w-100">Start free trial</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box featured">
+                        <div class="featured-title">most popular</div>
+                        <div class="section-header">
+                            <div class="title-area">
+                                <div class="icon-area"><i class="fa-regular fa-paper-plane"></i></div>
+                                <h3 class="title">Gold</h3>
+                            </div>
+                            <p>Best for professionals</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="title"><span class="price">$39</span> <span>/month</span></div>
+                            <ul class="pricing-feature">
+                                <li><i class="fa-regular fa-circle-check"></i>5 Listing Allowed</li>
+                                <li><i class="fa-regular fa-circle-check"></i>5 Amenities per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>5 Photos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>5 Videos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>5 Social Items per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>5 Additional Features per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>Featured Listing Allowed</li>
+                                <li><i class="fa-regular fa-circle-xmark"></i>Featured Listing not Allowed</li>
+                            </ul>
+                            <div class="btn-area">
+                                <button type="button" class="cmn-btn w-100">Start free trial</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box">
+                        <div class="section-header">
+                            <div class="title-area">
+                                <div class="icon-area">
+                                    <i class="fa-regular fa-bolt"></i>
+                                </div>
+                                <h3 class="title">Premium</h3>
+                            </div>
+                            <p>Toolset for hard players</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="title"><span class="price">$129</span> <span>/month</span></div>
+                            <ul class="pricing-feature">
+                                <li><i class="fa-regular fa-circle-check"></i>20 Listing Allowed</li>
+                                <li><i class="fa-regular fa-circle-check"></i>20 Amenities per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>20 Photos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>20 Videos per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>20 Social Items per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>20 Additional Features per Listing</li>
+                                <li><i class="fa-regular fa-circle-check"></i>Featured Listing Allowed</li>
+                                <li><i class="fa-regular fa-circle-check"></i>Featured Listing Allowed</li>
+                            </ul>
+                            <div class="btn-area">
+                                <button type="button" class="cmn-btn w-100">Start free trial</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Pricinig section end -->
+
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png"
+                                    alt="CarCraze"></a>
+                        </div>
+                        <p>
+                            Experience the SMM Matrix Advantage - Empowering Social Success with Data-Driven
+                            Solutions.
+                        </p>
+
+                        <ul class="social-box mt-30">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Slick slider js link -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- fancybox Js link -->
+    <script src="assets/js/fancybox.umd.js"></script>
+
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

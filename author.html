@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCraze</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <figure class="loader">
+            <div class="car">
+                <span class="body"></span>
+                <span class="wheels"></span>
+            </div>
+            <div class="strikes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </figure>
+    </div>
+    <!-- Preloader section end -->
+
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="CarCraze"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt="CarCraze"></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="listing.html">listing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <div class="language-box">
+                            <i class="fa-regular fa-coins"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>USD</option>
+                                <option value="1">EUR</option>
+                                <option value="2">bdt</option>
+                            </select>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="add-listing.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">add listing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="notification-panel">
+                            <button class="dropdown-toggle">
+                                <i class="fal fa-bell" aria-hidden="true"></i>
+                                <span class="count">3</span>
+                            </button>
+                            <ul class="notification-dropdown">
+                                <div class="dropdown-box">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">6 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">1 Day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">3 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="clear-all fixed-bottom">
+                                    <a href="">Clear all</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="CarCraze">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-section">
+        <div class="banner-section-inner">
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <div class="breadcrumb-area">
+                            <h3>author</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="fa-light fa-house"></i>
+                                        Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">author</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Author section start -->
+    <section class="author-section">
+        <div class="container">
+            <div class="author-box">
+                <div class="row">
+                    <div class="author-box-top align-items-center">
+                        <div class="thumbs-area">
+                            <figure>
+                                <img src="./assets/img/Person/1.jpg" alt="CarCraze">
+                            </figure>
+                        </div>
+                        <div class="content-area">
+                            <h3>Silvan Schuppisser</h3>
+                            <h5>United States</h5>
+                            <ul class="social-box mt-30">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row  mt-50">
+                    <div class="author-details">
+                        <h4>About The Author</h4>
+                        <hr class="cmn-hr2">
+                        <p>
+                            Silvan Schuppisser is a British American Crime Fiction writer best known for his trilogy
+                            ‘CRIME XYZ’ which has sold more than 1.5 million copies worldwide in 2007
+                        </p>
+                        <!-- <br> -->
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour, or randomised words which don't look
+                            even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
+                            sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+                            generators on the Internet tend to repeat predefined chunks as necessary, making this the
+                            first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
+                            with a handful of model
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Author section end -->
+
+    <!-- Blog Section start -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-header text-center mb-50">
+                        <div class="section-subtitle">news & blogs</div>
+                        <h2 class="section-title mx-auto">our news & blogs</h2>
+                        <p class="cmn-para-text mx-auto">Welcome to the CarCraze Blogs section, where we open the
+                            doors to a dynamic world of insights and information in the courier and delivery industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/car/car1-640x550.jpg" alt="CarCraze">
+
+                            </div>
+                        </a>
+                        <div class="content-box">
+
+                            <ul class="meta">
+                                <li class="item">
+                                    <a href="author.html"><span class="icon"><i class="fa-regular fa-user"></i></span>
+                                        <span>by Admin</span></a>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i></span>
+                                    <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i></span>
+                                    <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <h4 class="blog-title"><a class="border-effect" href="blog-details.html">Revving Up
+                                    Expectations: Top 10 Most Anticipated Cars of 2024</a>
+                            </h4>
+                            <div class="para-text">
+                                <p>
+                                    Get a sneak peek into the future of automotive excellence as we unveil the most
+                                    anticipated cars of the year. From cutting-edge technology to jaw-dropping designs,
+                                    these upcoming models are set to redefine the driving experience.
+                                </p>
+                            </div>
+
+                            <a href="blog-details.html" class="blog-btn">
+                                <i class="fa-regular fa-arrow-up-right"></i>
+                                learn more
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/car/car10-640x550.jpg" alt="CarCraze">
+                            </div>
+                        </a>
+                        <div class="content-box">
+
+                            <ul class="meta">
+                                <li class="item">
+                                    <a href="author.html"><span class="icon"><i class="fa-regular fa-user"></i>
+                                            <span>by Admin</span></a>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i>
+                                        <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i>
+                                        <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <h4 class="blog-title"><a class="border-effect" href="blog-details.html">Charged and Ready:
+                                    The Electric Car Revolution Unveiled</a></h4>
+                            <div class="para-text">
+                                <p>
+                                    Explore the electrifying world of electric vehicles (EVs) in our in-depth coverage
+                                    of the latest trends and innovations. Discover the environmental benefits and
+                                    groundbreaking technologies that are propelling the electric car revolution forward.
+                                </p>
+                            </div>
+                            <a href="blog-details.html" class="blog-btn">
+                                <i class="fa-regular fa-arrow-up-right"></i>
+                                learn more
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/car/car13-660x440.jpg" alt="CarCraze">
+                            </div>
+                        </a>
+                        <div class="content-box">
+
+                            <ul class="meta">
+                                <li class="item">
+                                    <a href="author.html"><span class="icon"><i class="fa-regular fa-user"></i>
+                                            <span>by Admin</span></a>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i>
+                                        <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i>
+                                        <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <h4 class="blog-title "><a class="border-effect" href="blog-details.html">Navigate with
+                                    Confidence: Essential Tips for Buying a Used Car</a></h4>
+                            <div class="para-text">
+                                <p>
+                                    Arm yourself with the knowledge needed to make a savvy used car purchase. Our
+                                    comprehensive guide provides essential tips on inspecting, negotiating, and ensuring
+                                    a smooth buying experience for pre-owned vehicles.
+                                </p>
+                            </div>
+                            <a href="blog-details.html" class="blog-btn">
+                                <i class="fa-regular fa-arrow-up-right"></i>
+                                learn more
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape2"></div>
+    </section>
+    <!-- Blog Section end -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png"
+                                    alt="CarCraze"></a>
+                        </div>
+                        <p>
+                            Experience the SMM Matrix Advantage - Empowering Social Success with Data-Driven
+                            Solutions.
+                        </p>
+
+                        <ul class="social-box mt-30">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

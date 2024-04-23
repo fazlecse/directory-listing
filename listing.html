@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCraze</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick slider Css link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Nice select css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <figure class="loader">
+            <div class="car">
+                <span class="body"></span>
+                <span class="wheels"></span>
+            </div>
+            <div class="strikes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </figure>
+    </div>
+    <!-- Preloader section end -->
+
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="CarCraze"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt="CarCraze"></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="listing.html">listing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <div class="language-box">
+                            <i class="fa-regular fa-coins"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>USD</option>
+                                <option value="1">EUR</option>
+                                <option value="2">bdt</option>
+                            </select>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="add-listing.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">add listing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="notification-panel">
+                            <button class="dropdown-toggle">
+                                <i class="fal fa-bell" aria-hidden="true"></i>
+                                <span class="count">3</span>
+                            </button>
+                            <ul class="notification-dropdown">
+                                <div class="dropdown-box">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">6 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">1 Day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">3 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="clear-all fixed-bottom">
+                                    <a href="">Clear all</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="CarCraze">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-section">
+        <div class="banner-section-inner">
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <div class="breadcrumb-area">
+                            <h3>listing</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="fa-light fa-house"></i>
+                                        Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">listing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+
+    <!-- Products section start -->
+    <section class="products-section">
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-xxl-2 col-xl-3">
+                    <div class="sidebar">
+                        <div class="d-none d-xl-block">
+                            <div class="widget-title">
+                                <h6>What Are You Looking For</h6>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                            </div>
+                            <hr class="cmn-hr2">
+                            <div class="widget-title">
+                                <h6>Sort by</h6>
+                            </div>
+                            <div>
+                                <label class="form-label">Sort results by</label>
+                                <div class="nice-select-section">
+                                    <select class="nice-select">
+                                        <option data-display="Newest First">Newest First</option>
+                                        <option value="1">Most Popular</option>
+                                        <option value="2">Most Rated</option>
+                                        <option value="3">new car</option>
+                                        <option value="4">used car</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="cmn-hr2">
+                            <div class="widget-title">
+                                <h6>Filter by</h6>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            brands
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="checkbox-categories-area">
+                                                <div class="section-inner">
+                                                    <div class="categories-list">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked9" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked9">
+                                                                <span>Audi</span> <span class="highlight">(145)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked10">
+                                                            <label class="form-check-label" for="flexCheckChecked10">
+                                                                <span>Ford</span> <span class="highlight">(100)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked11">
+                                                            <label class="form-check-label" for="flexCheckChecked11">
+                                                                <span>Mercedes-Benz</span> <span
+                                                                    class="highlight">(319)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked12">
+                                                            <label class="form-check-label" for="flexCheckChecked12">
+                                                                <span>Toyota</span> <span class="highlight">(50)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked13">
+                                                            <label class="form-check-label" for="flexCheckChecked13">
+                                                                <span>City tours</span> <span
+                                                                    class="highlight">(500)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked14">
+                                                            <label class="form-check-label" for="flexCheckChecked14">
+                                                                <span>Porsche</span> <span
+                                                                    class="highlight">(1000)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked15">
+                                                            <label class="form-check-label" for="flexCheckChecked15">
+                                                                <span>Nissan</span> <span class="highlight">(700)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked16">
+                                                            <label class="form-check-label" for="flexCheckChecked16">
+                                                                <span>Group tours</span> <span
+                                                                    class="highlight">(20)</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            price
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="range-area">
+                                                <input type="text" class="js-range-slider" name="my_range" value=""
+                                                    data-type="double" data-min="0" data-max="1000" data-from="80"
+                                                    data-to="500" data-grid="false">
+                                            </div>
+                                            <h5 class="mt-20">Price : <span class="highlight">$80 - $500</span></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Ratings
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="checkbox-categories-area">
+                                                <div class="section-inner">
+                                                    <div class="categories-list">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked17" checked>
+                                                            <label class="form-check-label" for="flexCheckChecked17">
+                                                                <ul class="star-list">
+                                                                    <li>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked18">
+                                                            <label class="form-check-label" for="flexCheckChecked18">
+                                                                <ul class="star-list">
+                                                                    <li>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked19">
+                                                            <label class="form-check-label" for="flexCheckChecked19">
+                                                                <ul class="star-list">
+                                                                    <li>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked20">
+                                                            <label class="form-check-label" for="flexCheckChecked20">
+                                                                <ul class="star-list">
+                                                                    <li>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckChecked21">
+                                                            <label class="form-check-label" for="flexCheckChecked21">
+                                                                <ul class="star-list">
+                                                                    <li>
+                                                                        <i class="active fa-solid fa-star"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-filter-bar d-xl-none">
+                            <button class="cmn-btn w-100" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                <i class="fa-regular fa-filter-list"></i> Filters
+                            </button>
+
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with
+                                        scrolling</h5>
+                                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close">
+                                        <i class="fa-regular fa-arrow-left"></i></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div class="widget-title">
+                                        <h6>What Are You Looking For</h6>
+                                    </div>
+                                    <div class="search-box">
+                                        <input type="text" class="form-control" placeholder="Search here...">
+                                        <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                                    </div>
+                                    <hr class="cmn-hr2">
+                                    <div class="widget-title">
+                                        <h6>Sort by</h6>
+                                    </div>
+                                    <div>
+                                        <label class="form-label">Sort results by</label>
+                                        <div class="nice-select-section">
+                                            <select class="nice-select">
+                                                <option data-display="Newest First">Newest First</option>
+                                                <option value="1">Most Popular</option>
+                                                <option value="2">Most Rated</option>
+                                                <option value="3">new car</option>
+                                                <option value="4">used car</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr class="cmn-hr2">
+                                    <div class="widget-title">
+                                        <h6>Filter by</h6>
+                                    </div>
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    brands
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="checkbox-categories-area">
+                                                        <div class="section-inner">
+                                                            <div class="categories-list">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked9" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked9">
+                                                                        <span>Audi</span> <span
+                                                                            class="highlight">(145)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked10">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked10">
+                                                                        <span>Ford</span> <span
+                                                                            class="highlight">(100)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked11">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked11">
+                                                                        <span>Mercedes-Benz</span> <span
+                                                                            class="highlight">(319)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked12">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked12">
+                                                                        <span>Toyota</span> <span
+                                                                            class="highlight">(50)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked13">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked13">
+                                                                        <span>City tours</span> <span
+                                                                            class="highlight">(500)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked14">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked14">
+                                                                        <span>Porsche</span> <span
+                                                                            class="highlight">(1000)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked15">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked15">
+                                                                        <span>Nissan</span> <span
+                                                                            class="highlight">(700)</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked16">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked16">
+                                                                        <span>Group tours</span> <span
+                                                                            class="highlight">(20)</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    price
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="range-area">
+                                                        <input type="text" class="js-range-slider" name="my_range"
+                                                            value="" data-type="double" data-min="0" data-max="1000"
+                                                            data-from="80" data-to="500" data-grid="false">
+                                                    </div>
+                                                    <h5 class="mt-20">Price : <span class="highlight">$80 - $500</span>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    Ratings
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="checkbox-categories-area">
+                                                        <div class="section-inner">
+                                                            <div class="categories-list">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked17" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked17">
+                                                                        <ul class="star-list">
+                                                                            <li>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked18">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked18">
+                                                                        <ul class="star-list">
+                                                                            <li>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked19">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked19">
+                                                                        <ul class="star-list">
+                                                                            <li>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked20">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked20">
+                                                                        <ul class="star-list">
+                                                                            <li>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckChecked21">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked21">
+                                                                        <ul class="star-list">
+                                                                            <li>
+                                                                                <i class="active fa-solid fa-star"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xxl-7 col-xl-6 col-lg-8">
+                    <div class="main-content">
+                        <div class="listing-topbar">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <ul class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html"> Audi</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">Audi A6 3.5 – New</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 justify-content-end d-flex">
+                                    <div>
+                                        Showing <strong>1 – 12</strong> of <strong>15</strong> results
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car1-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">Toyota Camry New</a>
+                                        </h5>
+                                        <p class="description">
+                                            3.5 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$25,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car3-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">T-Cross – 2023</a>
+                                        </h5>
+                                        <p class="description">
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car6-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">C-Class – 2023</a>
+                                        </h5>
+                                        <p class="description">
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car9-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">Ford Transit – 2021</a>
+                                        </h5>
+                                        <p class="description">
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car10-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">New GLC – 2023</a>
+                                        </h5>
+                                        <p class="description">
+
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car11-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">Audi A6 3.5 – New</a>
+                                        </h5>
+                                        <p class="description">
+                                            3.5 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car9-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">Ford Transit – 2021</a>
+                                        </h5>
+                                        <p class="description">
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car10-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">New GLC – 2023</a>
+                                        </h5>
+                                        <p class="description">
+
+                                            4.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-6 col-sm-6">
+                                <div class="product-box">
+                                    <div class="image-area">
+                                        <a href="listing-details.html"> <img src="./assets/img/car/car11-640x550.jpg"
+                                                alt="CarCraze"></a>
+                                    </div>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <h5 class="title">
+                                            <a href="listing-details.html">Audi A6 3.5 – New</a>
+                                        </h5>
+                                        <p class="description">
+                                            3.5 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
+                                        </p>
+                                        <hr>
+                                        <div class="product-feature-box">
+                                            <div class="item">
+                                                <i class="fa-regular fa-tachometer-alt"></i>
+                                                <span>50 Miles </span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gas-pump"></i>
+                                                <span>petrol</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="fa-regular fa-gear"></i>
+                                                <span>automatic </span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom-info">
+                                            <h4 class="mb-0">$45,000</h4>
+                                            <a href="listing-details.html" class="link">View Details<i
+                                                    class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-4">
+                    <!-- Map section start -->
+                    <div class="map-section">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1668508535036!5m2!1sen!2sbd"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- Map section end -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Products section end -->
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png"
+                                    alt="CarCraze"></a>
+                        </div>
+                        <p>
+                            Experience the SMM Matrix Advantage - Empowering Social Success with Data-Driven
+                            Solutions.
+                        </p>
+
+                        <ul class="social-box mt-30">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Slick slider js link -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- intlTelInput Js link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+    <!-- Social share Js link -->
+    <script src="assets/js/socialSharing.js"></script>
+
+
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

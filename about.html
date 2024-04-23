@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCraze</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick slider Css link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <figure class="loader">
+            <div class="car">
+                <span class="body"></span>
+                <span class="wheels"></span>
+            </div>
+            <div class="strikes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </figure>
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="CarCraze"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt="CarCraze"></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="listing.html">listing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <div class="language-box">
+                            <i class="fa-regular fa-coins"></i>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>USD</option>
+                                <option value="1">EUR</option>
+                                <option value="2">bdt</option>
+                            </select>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="add-listing.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">add listing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="notification-panel">
+                            <button class="dropdown-toggle">
+                                <i class="fal fa-bell" aria-hidden="true"></i>
+                                <span class="count">3</span>
+                            </button>
+                            <ul class="notification-dropdown">
+                                <div class="dropdown-box">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">6 Hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">1 Day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">3 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-bell" aria-hidden="true"></i>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                <span class="time">4 Days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="clear-all fixed-bottom">
+                                    <a href="">Clear all</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="CarCraze">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-section">
+        <div class="banner-section-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="breadcrumb-area">
+                            <h3>About Us</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="fa-light fa-house"></i>
+                                        Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- About section start -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-section-inner">
+                <div class="row g-4 g-sm-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="thumbs-area">
+                            <div class="about-image">
+                                <img src="./assets/img/about/pexels-erik-mclean-4077271.jpg " alt="CarCraze">
+                                <div class="experience">
+                                    <h3 class="mb-0">12 Years+</h3>
+                                    <h4 class="mb-0">Experience</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <span class="section-subtitle">About Us</span>
+                            <h2 class="section-title">Discover the CarCraze difference</h2>
+                            <p>
+                                Welcome to CarCraze, where excellence in courier services meets the speed of the
+                                digital age. At CarCraze, we take pride in being your go-to solution for seamless and
+                                reliable deliveries. Our commitment is to redefine the courier experience by leveraging
+                                cutting-edge technology and a passion for exceptional service.
+                            </p>
+
+                            <div class="btn-area mt-30">
+                                <button type="buttot" class="cmn-btn">contact us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- How it works section start -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="row">
+                <div class="section-header text-center mb-50">
+                    <div class="section-subtitle"> how it works </div>
+                    <h2 class="section-title mx-auto"> How Does It Work</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-xl-4 col-md-6">
+                    <div class="cmn-box">
+                        <div class="icon-area">
+                            <i class="fa-regular fa-map-location-dot"></i>
+                        </div>
+                        <div class="text-area">
+                            <h4 class="title">Search Your Dream Car </h4>
+                            <p class="mb-0">Welcome to CarCraze, where car shopping knows no boundaries.
+                                Discover your perfect ride from anywhere in the world with our global
+                                marketplace:</p>
+                        </div>
+                        <span class="text-stroke h2">01</span>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="cmn-box">
+                        <div class="icon-area">
+                            <i class="fa-regular fa-phone"></i>
+                        </div>
+                        <div class="text-area">
+                            <h4 class="title">Contact With Us </h4>
+                            <p class="mb-0">Feel free to reach out at any time. Whether you're buying, selling, or just
+                                passionate about cars, we're here to assist you!</p>
+                        </div>
+                        <span class="text-stroke h2">02</span>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="cmn-box">
+                        <div class="icon-area">
+                            <i class="fa-regular fa-car"></i>
+                        </div>
+                        <div class="text-area">
+                            <h4 class="title">Recieve The Car </h4>
+                            <p class="mb-0">Car servicing is the regular maintenance and inspection of a vehicle
+                                to ensure.</p>
+                        </div>
+                        <span class="text-stroke h2">03</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- How it works section end -->
+
+    <!-- Testimonial section start -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="section-header text-center">
+                    <div class="section-subtitle">testimonial</div>
+                    <h2 class="">What our Clients Say</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme testimonial-carousel">
+                    <div class="item">
+                        <div class="testimonial-box">
+                            <p>
+                                "OMG! I cannot believe that I have got a brand new landing page after getting appmax. It
+                                was super easy to edit and publish.I have got a brand new landing page." </p>
+                            <div class="client-info">
+                                <div class="thumbs-area">
+                                    <img src="./assets/img/Person/1.jpg" alt="CarCraze">
+                                </div>
+                                <div class="content-area">
+                                    <h4 class="mb-0">Crol Mickey</h4>
+                                    <h6>Sydney, Australia</h6>
+                                </div>
+                            </div>
+                            <div class="quote-area">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-box">
+                            <p>
+                                "OMG! I cannot believe that I have got a brand new landing page after getting appmax. It
+                                was super easy to edit and publish.I have got a brand new landing page." </p>
+                            <div class="client-info">
+                                <div class="thumbs-area">
+                                    <img src="./assets/img/Person/1.jpg" alt="CarCraze">
+                                </div>
+                                <div class="content-area">
+                                    <h4 class="mb-0">Crol Mickey</h4>
+                                    <h6>Sydney, Australia</h6>
+                                </div>
+                            </div>
+                            <div class="quote-area">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-box">
+                            <p>
+                                "OMG! I cannot believe that I have got a brand new landing page after getting appmax. It
+                                was super easy to edit and publish.I have got a brand new landing page." </p>
+                            <div class="client-info">
+                                <div class="thumbs-area">
+                                    <img src="./assets/img/Person/1.jpg" alt="CarCraze">
+                                </div>
+                                <div class="content-area">
+                                    <h4 class="mb-0">Crol Mickey</h4>
+                                    <h6>Sydney, Australia</h6>
+                                </div>
+                            </div>
+                            <div class="quote-area">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial section end -->
+
+    <!-- Service banner section start -->
+    <section class="service-banner-section">
+        <div class="container">
+            <div class="row g-4 g-sm-5">
+                <div class="col-lg-6">
+                    <div class="service-banner buy">
+                        <img class="position-img" src="./assets/img/service-banner/key.png" alt="">
+                        <h3 class="mb-10">
+                            Are You Looking
+                            <br>
+                            For a Car ?
+                        </h3>
+                        <p class="description">We are committed to providing our customers with exceptional service.</p>
+                        <a href="" class="cmn-btn mt-10">get started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-banner sell">
+                        <img class="position-img" src="./assets/img/service-banner/car-rental.png" alt="">
+                        <h3 class="mb-10">
+                            Do You Want to
+                            <br>
+                            Sell a Car ?
+                        </h3>
+                        <p class="description">We are committed to providing our customers with exceptional service.</p>
+                        <a href="" class="cmn-btn2 mt-10">get started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service banner section end -->
+
+    <!-- Faq section start -->
+    <section class="faq-section">
+        <img class="shape2" src="./assets/img/background/net-shape.png" alt="CarCraze">
+        <img class="shape3" src="./assets/img/background/net-left.png" alt="CarCraze">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <div class="section-subtitle">
+                        FAQs
+                    </div>
+                    <h2 class="section-title mx-auto">
+                        Frequently Ask Question
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cmn-tabs">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-General-Questions-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-General-Questions" type="button" role="tab"
+                                aria-controls="pills-General-Questions" aria-selected="true"><i
+                                    class="fa-regular fa-users"></i>General
+                                Questions</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-Car-Features-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-Car-Features" type="button" role="tab"
+                                aria-controls="pills-Car-Features" aria-selected="false"><i
+                                    class="fa-regular fa-car"></i>Car Features</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-Technical-Support-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-Technical-Support" type="button" role="tab"
+                                aria-controls="pills-Technical-Support" aria-selected="false">
+                                <i class="fa-regular fa-screwdriver-wrench"></i>Technical Support</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-General-Questions" role="tabpanel"
+                        aria-labelledby="pills-General-Questions-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample2">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="true" aria-controls="collapseTwo">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTwo" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="true" aria-controls="collapseThree">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="headinThree" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinFour">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="true" aria-controls="collapseFour">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                aria-labelledby="headinFour" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse"
+                                                aria-labelledby="headingFive" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                    aria-expanded="false" aria-controls="collapseSix">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse"
+                                                aria-labelledby="headingSix" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample3">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinSeven">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSeven" aria-expanded="true"
+                                                    aria-controls="collapseSeven">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinSeven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinEight">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                    aria-expanded="true" aria-controls="collapseEight">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEight" class="accordion-collapse collapse"
+                                                aria-labelledby="headinEight" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinNine">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                                    aria-expanded="true" aria-controls="collapseNine">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseNine" class="accordion-collapse collapse"
+                                                aria-labelledby="headinNine" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTen">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                                                    aria-expanded="true" aria-controls="collapseTen">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTen" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTen" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingEleven">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                                                    aria-expanded="false" aria-controls="collapseEleven">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEleven" class="accordion-collapse collapse"
+                                                aria-labelledby="headingEleven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTweleve">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTweleve"
+                                                    aria-expanded="false" aria-controls="collapseTweleve">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTweleve" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTweleve" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Car-Features" role="tabpanel"
+                        aria-labelledby="pills-Car-Features-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample2">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="true" aria-controls="collapseTwo">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTwo" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="true" aria-controls="collapseThree">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="headinThree" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinFour">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="true" aria-controls="collapseFour">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                aria-labelledby="headinFour" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse"
+                                                aria-labelledby="headingFive" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                    aria-expanded="false" aria-controls="collapseSix">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse"
+                                                aria-labelledby="headingSix" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample3">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinSeven">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSeven" aria-expanded="true"
+                                                    aria-controls="collapseSeven">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinSeven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinEight">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                    aria-expanded="true" aria-controls="collapseEight">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEight" class="accordion-collapse collapse"
+                                                aria-labelledby="headinEight" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinNine">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                                    aria-expanded="true" aria-controls="collapseNine">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseNine" class="accordion-collapse collapse"
+                                                aria-labelledby="headinNine" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTen">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                                                    aria-expanded="true" aria-controls="collapseTen">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTen" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTen" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingEleven">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                                                    aria-expanded="false" aria-controls="collapseEleven">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEleven" class="accordion-collapse collapse"
+                                                aria-labelledby="headingEleven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTweleve">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTweleve"
+                                                    aria-expanded="false" aria-controls="collapseTweleve">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTweleve" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTweleve" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Technical-Support" role="tabpanel"
+                        aria-labelledby="pills-Technical-Support-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample2">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinOne" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="true" aria-controls="collapseTwo">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTwo" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="true" aria-controls="collapseThree">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="headinThree" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinFour">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="true" aria-controls="collapseFour">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                aria-labelledby="headinFour" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse"
+                                                aria-labelledby="headingFive" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                    aria-expanded="false" aria-controls="collapseSix">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse"
+                                                aria-labelledby="headingSix" data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="faq-content">
+                                    <div class="accordion" id="accordionExample3">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinSeven">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSeven" aria-expanded="true"
+                                                    aria-controls="collapseSeven">
+                                                    How do I book a shipment with CarCraze?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse show"
+                                                aria-labelledby="headinSeven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Booking a shipment with CarCraze is easy! Visit our
+                                                            website or use our
+                                                            mobile app to enter your shipment details, choose your
+                                                            services, get an
+                                                            instant quote, select your payment method, and confirm
+                                                            your order.
+                                                            You'll receive a unique tracking number to monitor your
+                                                            shipment in
+                                                            real-time.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinEight">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                    aria-expanded="true" aria-controls="collapseEight">
+                                                    What types of services does offer?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEight" class="accordion-collapse collapse"
+                                                aria-labelledby="headinEight" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            CarCraze offers a range of services, including express
+                                                            delivery,
+                                                            international shipping, packaging assistance, daily
+                                                            pick-up, and more.
+                                                            We tailor our services to meet your specific shipping
+                                                            needs, providing a
+                                                            customized and convenient experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinNine">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                                    aria-expanded="true" aria-controls="collapseNine">
+                                                    Is there a way to track my shipment?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseNine" class="accordion-collapse collapse"
+                                                aria-labelledby="headinNine" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Absolutely! CarCraze provides a robust real-time
+                                                            tracking system. Once
+                                                            your order is confirmed, you'll receive a unique
+                                                            tracking number. Enter
+                                                            this number on our website or app to monitor your
+                                                            shipment's journey
+                                                            from pick-up to delivery.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headinTen">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                                                    aria-expanded="true" aria-controls="collapseTen">
+                                                    How does CarCraze handle packaging?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTen" class="accordion-collapse collapse"
+                                                aria-labelledby="headinTen" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <div class="table-responsive">
+                                                        <p>
+                                                            Our professional packaging services are designed to
+                                                            protect your items
+                                                            during transit. During the booking process, you can opt
+                                                            for our
+                                                            packaging service. Our expert team will use quality
+                                                            materials to secure
+                                                            your items, ensuring they reach their destination
+                                                            safely.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingEleven">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                                                    aria-expanded="false" aria-controls="collapseEleven">
+                                                    What payment methods does CarCraze accept?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEleven" class="accordion-collapse collapse"
+                                                aria-labelledby="headingEleven" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        CarCraze offers a variety of payment options, including our
+                                                        secure
+                                                        E-Payment system. You can choose from credit cards, debit
+                                                        cards, and other
+                                                        electronic payment methods for a quick and secure
+                                                        transaction process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTweleve">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTweleve"
+                                                    aria-expanded="false" aria-controls="collapseTweleve">
+                                                    Can I schedule a daily pick-up for my shipments?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTweleve" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTweleve" data-bs-parent="#accordionExample3">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Yes, you can! CarCraze provides a Daily Pick-Up service for
+                                                        added
+                                                        convenience. During the booking process, you can schedule a
+                                                        pick-up time
+                                                        that suits your schedule, and our couriers will collect your
+                                                        packages from
+                                                        your specified location.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Faq section end -->
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png"
+                                    alt="CarCraze"></a>
+                        </div>
+                        <p>
+                            Experience the SMM Matrix Advantage - Empowering Social Success with Data-Driven
+                            Solutions.
+                        </p>
+
+                        <ul class="social-box mt-30">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Slick slider js link -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+
+
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
