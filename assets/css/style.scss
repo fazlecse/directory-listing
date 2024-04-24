@@ -59,6 +59,8 @@ Typography
 
 
 :root {
+    // --heading-font: "Asap", sans-serif ;
+    // --body-font: "Montserrat", sans-serif;
     --heading-font: "Montserrat", sans-serif;
     --body-font: "Asap", sans-serif;
     --primary-color: hsl(var(--base));
@@ -1003,6 +1005,68 @@ body::-webkit-scrollbar-thumb {
 
 
 // Scroll bar section end
+// Owl carouse section start
+.owl-stage-outer {
+    position: relative;
+
+}
+
+.owl-carousel:hover {
+    .owl-nav {
+
+        .owl-prev,
+        .owl-next {
+            opacity: 1;
+        }
+
+        .owl-prev {
+            left: calc(0% - 25px);
+        }
+
+        .owl-next {
+            right: calc(0% - 25px);
+        }
+
+    }
+}
+
+.owl-nav {
+
+    margin-top: 0 !important;
+
+
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50% !important;
+        background: var(--primary-color) !important;
+        background-size: 200% auto !important;
+        color: hsl(var(--white)) !important;
+        font-size: 20px !important;
+        transition: var(--transition);
+        opacity: 0;
+        font-family: 'Courier New', Courier, monospace !important;
+
+
+        &:hover {
+            background-position: center right !important;
+        }
+    }
+
+    .owl-prev {
+        left: calc(0% - 50px);
+    }
+
+    .owl-next {
+        right: calc(0% - 50px);
+    }
+
+}
+
 .owl-theme .owl-dots .owl-dot span {
     width: 10px;
     height: 5px;
@@ -1024,6 +1088,8 @@ body::-webkit-scrollbar-thumb {
 .owl-theme .owl-dots .owl-dot span {
     transition: all 0.5s ease-in-out;
 }
+
+// Owl carouse section start
 
 // Modal section start 
 .modal-content {
@@ -1462,7 +1528,6 @@ Reusable style section start
     gap: 5px;
 
     &:hover {
-        color: hsl(var(--white));
         text-decoration: underline;
     }
 }
@@ -1968,7 +2033,7 @@ Offcanvas end
 
 
 .section-header {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .top-right-radius-0 {
@@ -2156,8 +2221,9 @@ Offcanvas end
 
 .view-all-btn {
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
+
 
 }
 
@@ -2427,7 +2493,20 @@ section {
     margin-bottom: 10px;
     display: inline-flex;
     text-transform: capitalize;
-    font-weight: 700;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        background-color: hsl(var(--base)/.1);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 991px) {
@@ -4821,44 +4900,57 @@ Category section start
 .category-box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 25px;
     border: 1px solid var(--border-color1);
     border-radius: 10px;
     text-align: center;
     transition: var(--transition);
+    height: 100%;
 
     &:hover {
         box-shadow: var(--shadow1);
     }
 
-    .icon-area {
+    .icon-box {
         position: relative;
         width: 50px;
         min-width: 50px;
         height: 50px;
-        margin: auto;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: hsl(var(--base)/0.05);
-            top: 50%;
-            left: -10px;
-            transform: translateY(-50%);
-        }
+        background-color: hsl(var(--base)/.1);
+        border-radius: 5px;
+        color: var(--primary-color);
+        font-size: 20px;
     }
 
     .title {
         text-transform: capitalize;
     }
+
 }
+
+// .category-slider {
+//     height: 100%;
+//     .owl-stage-outer {
+//         height: 100%;
+//     }
+
+//     .owl-stage {
+//         height: 100%;
+//     }
+
+//     .owl-item {
+//         height: 100%;
+//     }
+
+//     .item {
+//         height: 100%;
+//     }
+// }
 
 /*----------------------------------------------
 00. Category section end
@@ -4879,16 +4971,16 @@ Category section start
 }
 
 .product-box {
-    background-color: var(--black);
     border: 1px solid var(--border-color1);
     border-radius: 15px;
     transition: var(--transition);
     overflow: hidden;
-    color: hsl(var(--white));
     position: relative;
+    background-color: var(--bg-color1);
+    box-shadow: var(--shadow1);
 
     &:hover {
-        box-shadow: var(--shadow1);
+        box-shadow: var(--shadow2);
 
         .image-area {
 
@@ -4931,7 +5023,7 @@ Category section start
 
         img {
             border-radius: 15px 15px 0 0;
-            height: 230px;
+            height: 250px;
             display: flex;
             width: 100%;
             transition: var(--transition);
@@ -4940,27 +5032,16 @@ Category section start
     }
 
     .content-area {
-        padding: 15px;
-
-        .title {
-            color: hsl(var(--white));
-        }
-
-        .description {
+        padding: 25px;
+        font-size: 14px;
+        .address {
             font-size: 14px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .bottom-info {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-
-            h4 {
-                color: hsl(var(--white));
+            gap: 5px;
+            margin-bottom: 20px;
+            i{
+                color: var(--primary-color);
             }
         }
     }
@@ -4968,6 +5049,38 @@ Category section start
     hr {
         border-color: var(--border-color2);
     }
+
+    .meta-data {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;   
+    }
+    .bottom-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .category {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid var(--border-color1);
+        padding: 5px 15px;
+        border-radius: 3px;
+        &:hover{
+            box-shadow: var(--shadow3);
+        }
+        .title {
+            text-transform: capitalize;
+        }
+
+        .icon {
+            color: var(--primary-color);
+            font-size: 15px;
+        }
+    }
+    
 }
 
 .product-feature-box {

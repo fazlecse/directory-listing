@@ -72,27 +72,46 @@ $(document).ready(function () {
         // Category-slider carousel
         $('.category-slider').owlCarousel({
             loop: true,
-            // autoplay: true,
+            autoplay: false,
             margin: 20,
-            nav: false,
-            // dots: false,
+            responsiveClass: true,
+            dots: false,
+            nav: true,
             // rtl: true,
             responsive: {
                 0: {
                     items: 1,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
                 },
-                350: {
+                400: {
                     items: 2,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
                 },
-                576: {
-                    items: 3
+                600: {
+                    items: 3,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
+                },
+                768: {
+                    nav: true,
+                    dots: false
                 },
                 992: {
-                    items: 4
+                    items: 4,
+                    nav: true,
+                    dots: false
                 },
-                1200: {
-                    items: 6
-                }
+                // 1200: {
+                //     items: 5,
+                //     nav: true,
+                //     dots: false
+                // },
+
             }
         });
     });
@@ -361,7 +380,6 @@ handleSelect(inputBox2, searchInput2, searchItem2);
 function filterItems(inputId, items) {
     const input = document.getElementById(inputId);
     const filter = input.value.toUpperCase();
-
 
     items.forEach((item) => {
         const title = item.querySelector(".title");
