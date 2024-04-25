@@ -1049,8 +1049,6 @@ body::-webkit-scrollbar-thumb {
         font-size: 20px !important;
         transition: var(--transition);
         opacity: 0;
-        font-family: 'Courier New', Courier, monospace !important;
-
 
         &:hover {
             background-position: center right !important;
@@ -1288,7 +1286,6 @@ Reusable style section start
     flex-direction: column;
     text-align: center;
     gap: 25px;
-    margin: 20px 0 0 80px;
     background-color: hsl(var(--white));
     border: 1px solid var(--border-color1);
     transition: var(--transition);
@@ -1318,18 +1315,6 @@ Reusable style section start
     }
 }
 
-.text-stroke {
-    position: absolute;
-    top: -30px;
-    left: -80px;
-    font-weight: 800;
-    font-size: 70px;
-    line-height: 1;
-    opacity: 0.2;
-    z-index: -1;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px var(--body-color);
-}
 
 // Responsive cmn box start
 @media(min-width: 768px) {
@@ -1342,12 +1327,6 @@ Reusable style section start
     .cmn-box {
         margin: 60px 0 0 0;
 
-    }
-
-    .text-stroke {
-        left: 50%;
-        transform: translateX(-50%);
-        top: -70px;
     }
 }
 
@@ -2184,7 +2163,7 @@ Offcanvas end
 }
 
 .get-start-btn {
-    padding: 8px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
     display: flex;
@@ -2906,9 +2885,8 @@ hr.divider:after {
 // Ratings section start
 .ratings li {
     i {
-        color: var(--orange);
-        opacity: .5;
-
+        color: #dee2e8;
+        color: var();
     }
 
     .active {
@@ -4932,26 +4910,6 @@ Category section start
     }
 
 }
-
-// .category-slider {
-//     height: 100%;
-//     .owl-stage-outer {
-//         height: 100%;
-//     }
-
-//     .owl-stage {
-//         height: 100%;
-//     }
-
-//     .owl-item {
-//         height: 100%;
-//     }
-
-//     .item {
-//         height: 100%;
-//     }
-// }
-
 /*----------------------------------------------
 00. Category section end
 ----------------------------------------------*/
@@ -4961,6 +4919,8 @@ Category section start
 ----------------------------------------------*/
 .featured-section {
     background-color: var(--bg-color3);
+    z-index: 0;
+    position: relative;
 }
 
 .product-slider {
@@ -4997,13 +4957,6 @@ Category section start
         z-index: 1;
         color: var(--heading-color);
 
-        &.active {
-            .item {
-                background-color: var(--primary-color);
-                color: hsl(var(--white));
-            }
-        }
-
         .item {
             background-color: hsl(var(--white));
             width: 35px;
@@ -5013,6 +4966,12 @@ Category section start
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &.active,
+            &:hover {
+                background-color: var(--primary-color);
+                color: hsl(var(--white));
+            }
         }
     }
 
@@ -5034,13 +4993,23 @@ Category section start
     .content-area {
         padding: 25px;
         font-size: 14px;
+
+        .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+        }
+
         .address {
             font-size: 14px;
             display: flex;
             align-items: center;
             gap: 5px;
             margin-bottom: 20px;
-            i{
+
+            i {
                 color: var(--primary-color);
             }
         }
@@ -5054,13 +5023,15 @@ Category section start
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-bottom: 10px;   
+        margin-bottom: 10px;
     }
-    .bottom-info{
+
+    .bottom-info {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .category {
         display: flex;
         align-items: center;
@@ -5068,9 +5039,11 @@ Category section start
         border: 1px solid var(--border-color1);
         padding: 5px 15px;
         border-radius: 3px;
-        &:hover{
+
+        &:hover {
             box-shadow: var(--shadow3);
         }
+
         .title {
             text-transform: capitalize;
         }
@@ -5080,7 +5053,7 @@ Category section start
             font-size: 15px;
         }
     }
-    
+
 }
 
 .product-feature-box {
@@ -5113,58 +5086,6 @@ Category section start
 Featured section end
 ----------------------------------------------*/
 
-
-
-
-/*----------------------------------------------
-04. Feature section start
-----------------------------------------------*/
-
-.feature-box {
-    padding: 30px;
-    border-radius: 10px 35px 10px 35px;
-    background-color: hsl(var(--white));
-    height: 100%;
-    border: 1px solid var(--border-color1);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: var(--transition);
-
-    &:hover {
-        box-shadow: var(--shadow1);
-    }
-
-    .content-area {
-        .title {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-// Responsive feature section start
-
-@media(max-width: 575px) {
-    .feature-box {
-        padding: 20px;
-    }
-}
-
-// Responsive feature section end
-// Rtl feature section start
-.rtl {
-    .feature-section .feature-section-inner .item:nth-child(1) {
-        border-left: 1px solid var(--border-color1);
-        border-right: none;
-        margin-right: 0;
-        margin-left: -20px;
-    }
-}
-
-// Rtl feature section end
-/*----------------------------------------------
-Feature section end
-----------------------------------------------*/
 
 /*----------------------------------------------
 05. About section start
@@ -5437,46 +5358,6 @@ Service page end
 
 
 /*----------------------------------------------
-06. Why Choose us section start
-----------------------------------------------*/
-.why-choose-us-section {
-    .left-side {
-        .thumbs-area {
-            margin-top: 20px;
-        }
-    }
-}
-
-
-
-.why-choose-us-thumbs {
-    .image-area {
-        position: relative;
-        height: 100%;
-
-        img {
-            background-color: hsl(var(--white));
-            box-shadow: var(--shadow2);
-            padding: 10px;
-            border-radius: 5px;
-        }
-    }
-}
-
-// Responsive why choose us section start
-@media(max-width: 575px) {
-    .cmn-box-container .cmn-box:nth-child(even) {
-        margin-right: -0;
-    }
-}
-
-// Responsive why choose us section end
-
-/*----------------------------------------------
-Why Choose us section end
-----------------------------------------------*/
-
-/*----------------------------------------------
 07. How it works section start
 ----------------------------------------------*/
 .popular-brands-section {
@@ -5486,11 +5367,7 @@ Why Choose us section end
 /*----------------------------------------------
 07. How it works section start
 ----------------------------------------------*/
-.how-it-works-section {
-    background-color: hsl(var(--base)/.02);
-    position: relative;
 
-}
 
 /*----------------------------------------------
 How it works section end

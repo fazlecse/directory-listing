@@ -77,6 +77,7 @@ $(document).ready(function () {
             responsiveClass: true,
             dots: false,
             nav: true,
+            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
             // rtl: true,
             responsive: {
                 0: {
