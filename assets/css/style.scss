@@ -59,8 +59,6 @@ Typography
 
 
 :root {
-    // --heading-font: "Asap", sans-serif ;
-    // --body-font: "Montserrat", sans-serif;
     --heading-font: "Montserrat", sans-serif;
     --body-font: "Asap", sans-serif;
     --primary-color: hsl(var(--base));
@@ -88,8 +86,8 @@ Typography
     --moderate-lime-green-opacity-low: rgb(77, 163, 78, .1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     --bg-color1: #ffffff;
-    --bg-color2: #050B20;
-    --bg-color3: #F9FBFC;
+    --bg-color2: #F9FBFC;
+    --bg-color3: #050B20;
     --bg-color4: #1E2437;
     --border-color1: rgba(231, 234, 243, .7);
     --border-color2: rgba(140, 152, 164, .25);
@@ -1682,6 +1680,7 @@ Reusable style section start
         box-shadow: none;
         background-color: transparent;
         padding-left: 35px;
+        text-transform: capitalize;
     }
 
     .select2-container .select2-selection--single:focus,
@@ -2473,6 +2472,7 @@ section {
     display: inline-flex;
     text-transform: capitalize;
     position: relative;
+    margin-left: 15px;
 
     &::after {
         position: absolute;
@@ -4910,6 +4910,7 @@ Category section start
     }
 
 }
+
 /*----------------------------------------------
 00. Category section end
 ----------------------------------------------*/
@@ -4918,7 +4919,7 @@ Category section start
 00. Featured section start
 ----------------------------------------------*/
 .featured-section {
-    background-color: var(--bg-color3);
+    background-color: var(--bg-color2);
     z-index: 0;
     position: relative;
 }
@@ -5360,14 +5361,9 @@ Service page end
 /*----------------------------------------------
 07. How it works section start
 ----------------------------------------------*/
-.popular-brands-section {
-    background-color: var(--bg-color3);
+.how-it-works-section {
+    position: relative;
 }
-
-/*----------------------------------------------
-07. How it works section start
-----------------------------------------------*/
-
 
 /*----------------------------------------------
 How it works section end
@@ -5472,145 +5468,86 @@ Faq end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-17. Testimonial section start
+08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-    background-color: var(--bg-color1);
-    background-image: url(../img/background/testimonial.png);
-    background-position: center;
-    background-repeat: no-repeat;
-
-    .testimonial-carousel {
-        max-width: 600px;
-        margin: auto;
-
-        .owl-stage-outer {
-            max-width: 600px;
-            margin: auto;
-            padding-bottom: 40px;
-
-        }
-
-        .owl-item {
-            max-width: 600px;
-            padding: 10px;
-        }
-    }
-
-
+    background-color: var(--bg-color2);
+    z-index: 0;
+    position: relative;
 
     .testimonial-box {
         position: relative;
-        padding: 60px 80px;
-        border-radius: 15px;
+        white-space: normal;
+        position: relative;
+        padding: 20px;
+        background: var(--bg-color1);
+        border-radius: 10px;
         transition: var(--transition);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 40px;
-        max-width: 600px;
-        background-color: hsl(var(--white));
-        box-shadow: var(--shadow2);
-        text-align: justify;
+        border: 1px solid var(--border-color1);
 
-        p {
-            font-size: 18px;
+        &:hover {
+            box-shadow: var(--shadow1);
         }
 
-        .client-info {
+        .profile-box {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-            .thumbs-area {
-                img {
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 50%;
-                }
+        .profile-thumbs {
+            background-color: var(--white);
 
+
+            img {
+                width: 55px;
+                min-width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                padding: 2px;
+                box-shadow: var(--shadow2);
+                background-color: var(--white);
+                border: 1px solid var(--border-color1);
             }
+        }
+
+        .qoute-icon {
+            font-size: 35px;
+            color: var(--primary-color);
         }
 
         .quote-area {
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 100px;
-            color: hsl(var(--base)/.05);
-        }
-
-        .line1 {
-            transition: var(--transition);
-            content: "";
-            width: calc(100% - 40px);
-            height: 15px;
-            position: absolute;
-            top: 100%;
-            left: 20px;
-            background: hsl(var(--white));
-            box-shadow: var(--shadow2);
-            border-radius: 0px 0px 10px 10px;
-        }
-
-        .line2 {
-            transition: var(--transition);
-            content: "";
-            width: calc(100% - 80px);
-            height: 15px;
-            position: absolute;
-            top: calc(100% + 15px);
-            left: 40px;
-            background: hsl(var(--white));
-            box-shadow: var(--shadow2);
-            border-radius: 0px 0px 10px 10px;
-        }
-    }
-
-
-
-
-
-    .owl-theme {
-        .owl-nav.disabled+.owl-dots {
-            margin-top: 30px;
+            margin-top: 20px;
         }
     }
 }
 
-// Responsive testimonial section start
-@media (max-width: 575px) {
+
+
+
+// Rtl testimonial section start 
+.rtl {
+    .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+// Rtl testimonial section start 
+// Dark theme testimonial section start
+.dark-theme {
     .testimonial-section {
         .testimonial-box {
-            padding: 20px;
-
-            .quote-area {
-                font-size: 50px;
-                right: 15px;
-                bottom: 15px;
-            }
-
-            .client-info .thumbs-area img {
-                width: 50px;
-                height: 50px;
-            }
+            background-color: var(--bg-color1);
+            border-color: var(--bg-color1);
         }
     }
 }
 
-// Responsive testimonial section end
-// Rtl testimonial section start
-.rtl {
-    .testimonial-section .testimonial-box .quote-area {
-        right: auto;
-        left: 30px;
-        transform: rotateY(-180deg);
-    }
-}
-
-// Rtl testimonial section end
+// Dark theme testimonial section start
 /*----------------------------------------------
-Testimonial section end
+Testimonial end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -5634,33 +5571,23 @@ Payment section end
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
+.blog-section {
+    background-color: var(--bg-color2);
+    z-index: 0;
+    position: relative;
+}
 
 .blog-btn {
     margin-top: 20px;
     text-transform: capitalize;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     transition: var(--transition);
-    font-weight: 700;
-
-    i {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: var(--primary-color);
-        font-size: 17px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: hsl(var(--white));
-        transition: var(--transition);
-    }
+    font-weight: 600;
 
     &:hover {
-        i {
-            transform: rotate(45deg);
-        }
+        gap: 10px;
     }
 }
 
@@ -5670,7 +5597,7 @@ Payment section end
     position: relative;
     border: 1px solid var(--border-color1);
     box-shadow: var(--shadow1);
-    border-radius: 15px;
+    border-radius: 10px;
 
     &:hover {
         .img-box {
@@ -5705,7 +5632,8 @@ Payment section end
 
     .img-box {
         overflow: hidden;
-        border-radius: 15px 15px 0 0;
+        border-radius: 10px 10px 0 0;
+        position: relative;
 
         img {
             transition: var(--transition);
@@ -5713,6 +5641,18 @@ Payment section end
             width: 100%;
             height: 300px;
             object-fit: cover;
+        }
+
+        .category {
+            position: absolute;
+            padding: 3px 20px;
+            left: 15px;
+            top: 15px;
+            text-transform: capitalize;
+            background-color: rgba(255, 255, 255, 0.2);
+            background-color: var(--primary-color);
+            color: hsl(var(--white));
+            border-radius: 99999px;
         }
 
     }
@@ -5737,8 +5677,9 @@ Payment section end
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         line-height: 1.2;
+        text-transform: capitalize;
     }
 
     .cmn-btn3 {
@@ -5756,7 +5697,7 @@ Payment section end
         display: flex;
         align-items: center;
         gap: 5px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: capitalize;
     }
 }
@@ -5911,72 +5852,11 @@ Author section2 end
 ----------------------------------------------*/
 
 
-/*----------------------------------------------
-00. Service banner section start
-----------------------------------------------*/
-.service-banner-section {
-    background-color: var(--bg-color3);
-}
-
-.service-banner {
-    position: relative;
-    background-color: hsl(var(--base)/0.1);
-    padding: 80px;
-    border-radius: 15px;
-
-    &.sell {
-        background-color: #ffe2ef;
-    }
-
-    .position-img {
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
-        max-width: 80px;
-        opacity: .3;
-    }
-
-    .description {
-        max-width: 390px;
-    }
-
-}
-
-// Responsive service banner section start
-@media(max-width: 767px) {
-    .service-banner {
-        padding: 30px;
-
-        .position-img {
-            bottom: 20px;
-            max-width: 60px;
-        }
-    }
-}
-
-// Responsive service banner section end
-// Rtl service banner section start
-.rtl {
-    .service-banner {
-        .position-img {
-            right: auto;
-            left: 50px;
-        }
-    }
-}
-
-// Rtl service banner section end
-/*----------------------------------------------
-Service banner section end
-----------------------------------------------*/
-
-
 
 /*----------------------------------------------
 12. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
-    margin-bottom: -100px;
     position: relative;
     z-index: 1;
 
@@ -6148,7 +6028,7 @@ Newsletter section end
     position: relative;
     z-index: 0;
     padding: 100px 0 50px;
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color3);
     color: hsl(var(--white)/.8);
 
     .footer-shape {
@@ -6210,6 +6090,7 @@ Newsletter section end
 .footer-widget {
     .widget-logo {
         margin-bottom: 10px;
+        display: inline-flex;
     }
 
     ul {

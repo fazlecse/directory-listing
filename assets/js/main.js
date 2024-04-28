@@ -27,45 +27,27 @@ $(document).ready(function () {
         $('.testimonial-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            margin: 10,
-            nav: false,
-            dots: true,
-            // rtl: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-        // Brands carousel
-        $('.product-slider').owlCarousel({
-            loop: true,
-            // autoplay: true,
-            margin: 10,
-            nav: false,
-            // dots: false,
+            margin: 20,
+            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
             // rtl: true,
             responsive: {
                 0: {
                     items: 1,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
+
                 },
-                450: {
+                600: {
+                    items: 1,
+                    nav: true,
+                    dots: false,
+
+                },
+                1000: {
                     items: 2,
-                },
-                576: {
-                    items: 2
-                },
-                992: {
-                    items: 3
-                },
-                1200: {
-                    items: 4
+                    nav: true,
+                    dots: false,
                 }
             }
         });
@@ -319,32 +301,7 @@ if ($("#telephone").length) {
 // International Telephone Input end
 
 
-// // Dropdown select with Filter start
-// const inputBox = document.querySelector('.input-box');
-// // const soValue = document.querySelector('.soValue');
-// const searchInput = document.querySelector('.search-input');
-// const searchItem = document.querySelectorAll('.search-item');
-
-// searchInput.addEventListener('click', function (event) {
-//     inputBox.classList.add('active');
-//     event.stopPropagation();
-// });
-
-// window.addEventListener('click', function () {
-//     inputBox.classList.remove('active');
-// });
-
-// searchItem.forEach(function (searchItemSingle) {
-//     searchItemSingle.addEventListener('click', function () {
-//         const text = searchItemSingle.querySelector(".title");
-//         const textContent = text.textContent;
-//         searchInput.value = textContent;
-//         inputBox.classList.remove('active');
-//     });
-// });
-
 function handleSelect(inputBox, searchInput, searchItem) {
-
     searchInput.addEventListener('click', function (event) {
         inputBox.classList.add('active');
         event.stopPropagation();

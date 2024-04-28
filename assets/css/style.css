@@ -79,8 +79,8 @@ Typography
   --moderate-lime-green-opacity-low: rgb(77, 163, 78, .1);
   --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
   --bg-color1: #ffffff;
-  --bg-color2: #050B20;
-  --bg-color3: #F9FBFC;
+  --bg-color2: #F9FBFC;
+  --bg-color3: #050B20;
   --bg-color4: #1E2437;
   --border-color1: rgba(231, 234, 243, .7);
   --border-color2: rgba(140, 152, 164, .25);
@@ -1356,6 +1356,7 @@ Reusable style section start
   box-shadow: none;
   background-color: transparent;
   padding-left: 35px;
+  text-transform: capitalize;
 }
 .multiple-search-box .select2-container .select2-selection--single:focus,
 .multiple-search-box .select2-container .select2-selection--multiple:focus {
@@ -2003,6 +2004,7 @@ section {
   display: inline-flex;
   text-transform: capitalize;
   position: relative;
+  margin-left: 15px;
 }
 .section-subtitle::after {
   position: absolute;
@@ -3931,7 +3933,7 @@ Category section start
 00. Featured section start
 ----------------------------------------------*/
 .featured-section {
-  background-color: var(--bg-color3);
+  background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
 }
@@ -4274,13 +4276,10 @@ Service page end
 /*----------------------------------------------
 07. How it works section start
 ----------------------------------------------*/
-.popular-brands-section {
-  background-color: var(--bg-color3);
+.how-it-works-section {
+  position: relative;
 }
 
-/*----------------------------------------------
-07. How it works section start
-----------------------------------------------*/
 /*----------------------------------------------
 How it works section end
 ----------------------------------------------*/
@@ -4351,111 +4350,65 @@ How it works section end
 Faq end
 ----------------------------------------------*/
 /*----------------------------------------------
-17. Testimonial section start
+08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-  background-color: var(--bg-color1);
-  background-image: url(../img/background/testimonial.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.testimonial-section .testimonial-carousel {
-  max-width: 600px;
-  margin: auto;
-}
-.testimonial-section .testimonial-carousel .owl-stage-outer {
-  max-width: 600px;
-  margin: auto;
-  padding-bottom: 40px;
-}
-.testimonial-section .testimonial-carousel .owl-item {
-  max-width: 600px;
-  padding: 10px;
+  background-color: var(--bg-color2);
+  z-index: 0;
+  position: relative;
 }
 .testimonial-section .testimonial-box {
   position: relative;
-  padding: 60px 80px;
-  border-radius: 15px;
+  white-space: normal;
+  position: relative;
+  padding: 20px;
+  background: var(--bg-color1);
+  border-radius: 10px;
   transition: var(--transition);
+  border: 1px solid var(--border-color1);
+}
+.testimonial-section .testimonial-box:hover {
+  box-shadow: var(--shadow1);
+}
+.testimonial-section .testimonial-box .profile-box {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 600px;
-  background-color: hsl(var(--white));
-  box-shadow: var(--shadow2);
-  text-align: justify;
+  gap: 10px;
+  margin-top: 20px;
 }
-.testimonial-section .testimonial-box p {
-  font-size: 18px;
+.testimonial-section .testimonial-box .profile-thumbs {
+  background-color: var(--white);
 }
-.testimonial-section .testimonial-box .client-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.testimonial-section .testimonial-box .client-info .thumbs-area img {
-  width: 70px;
-  height: 70px;
+.testimonial-section .testimonial-box .profile-thumbs img {
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
   border-radius: 50%;
+  padding: 2px;
+  box-shadow: var(--shadow2);
+  background-color: var(--white);
+  border: 1px solid var(--border-color1);
+}
+.testimonial-section .testimonial-box .qoute-icon {
+  font-size: 35px;
+  color: var(--primary-color);
 }
 .testimonial-section .testimonial-box .quote-area {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  font-size: 100px;
-  color: hsl(var(--base)/0.05);
-}
-.testimonial-section .testimonial-box .line1 {
-  transition: var(--transition);
-  content: "";
-  width: calc(100% - 40px);
-  height: 15px;
-  position: absolute;
-  top: 100%;
-  left: 20px;
-  background: hsl(var(--white));
-  box-shadow: var(--shadow2);
-  border-radius: 0px 0px 10px 10px;
-}
-.testimonial-section .testimonial-box .line2 {
-  transition: var(--transition);
-  content: "";
-  width: calc(100% - 80px);
-  height: 15px;
-  position: absolute;
-  top: calc(100% + 15px);
-  left: 40px;
-  background: hsl(var(--white));
-  box-shadow: var(--shadow2);
-  border-radius: 0px 0px 10px 10px;
-}
-.testimonial-section .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-@media (max-width: 575px) {
-  .testimonial-section .testimonial-box {
-    padding: 20px;
-  }
-  .testimonial-section .testimonial-box .quote-area {
-    font-size: 50px;
-    right: 15px;
-    bottom: 15px;
-  }
-  .testimonial-section .testimonial-box .client-info .thumbs-area img {
-    width: 50px;
-    height: 50px;
-  }
+.rtl .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
+  margin-right: 0;
+  margin-left: 10px;
 }
-.rtl .testimonial-section .testimonial-box .quote-area {
-  right: auto;
-  left: 30px;
-  transform: rotateY(-180deg);
+
+.dark-theme .testimonial-section .testimonial-box {
+  background-color: var(--bg-color1);
+  border-color: var(--bg-color1);
 }
 
 /*----------------------------------------------
-Testimonial section end
+Testimonial end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Payment section start
@@ -4470,36 +4423,30 @@ Payment section end
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
+.blog-section {
+  background-color: var(--bg-color2);
+  z-index: 0;
+  position: relative;
+}
+
 .blog-btn {
   margin-top: 20px;
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+  font-weight: 600;
+}
+.blog-btn:hover {
   gap: 10px;
-  transition: var(--transition);
-  font-weight: 700;
-}
-.blog-btn i {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: hsl(var(--white));
-  transition: var(--transition);
-}
-.blog-btn:hover i {
-  transform: rotate(45deg);
 }
 
 .blog-box {
   position: relative;
   border: 1px solid var(--border-color1);
   box-shadow: var(--shadow1);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .blog-box:hover .img-box {
   overflow: hidden;
@@ -4529,7 +4476,8 @@ Payment section end
 }
 .blog-box .img-box {
   overflow: hidden;
-  border-radius: 15px 15px 0 0;
+  border-radius: 10px 10px 0 0;
+  position: relative;
 }
 .blog-box .img-box img {
   transition: var(--transition);
@@ -4538,6 +4486,17 @@ Payment section end
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.blog-box .img-box .category {
+  position: absolute;
+  padding: 3px 20px;
+  left: 15px;
+  top: 15px;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--primary-color);
+  color: hsl(var(--white));
+  border-radius: 99999px;
 }
 .blog-box .content-box {
   margin: 15px;
@@ -4555,8 +4514,9 @@ Payment section end
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   line-height: 1.2;
+  text-transform: capitalize;
 }
 .blog-box .cmn-btn3 {
   margin-top: 30px;
@@ -4572,7 +4532,7 @@ Payment section end
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
@@ -4679,54 +4639,9 @@ Author section end
 Author section2 end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Service banner section start
-----------------------------------------------*/
-.service-banner-section {
-  background-color: var(--bg-color3);
-}
-
-.service-banner {
-  position: relative;
-  background-color: hsl(var(--base)/0.1);
-  padding: 80px;
-  border-radius: 15px;
-}
-.service-banner.sell {
-  background-color: #ffe2ef;
-}
-.service-banner .position-img {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-  max-width: 80px;
-  opacity: 0.3;
-}
-.service-banner .description {
-  max-width: 390px;
-}
-
-@media (max-width: 767px) {
-  .service-banner {
-    padding: 30px;
-  }
-  .service-banner .position-img {
-    bottom: 20px;
-    max-width: 60px;
-  }
-}
-.rtl .service-banner .position-img {
-  right: auto;
-  left: 50px;
-}
-
-/*----------------------------------------------
-Service banner section end
-----------------------------------------------*/
-/*----------------------------------------------
 12. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
-  margin-bottom: -100px;
   position: relative;
   z-index: 1;
 }
@@ -4851,7 +4766,7 @@ Newsletter section end
   position: relative;
   z-index: 0;
   padding: 100px 0 50px;
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color3);
   color: hsl(var(--white)/0.8);
 }
 .footer-section .footer-shape img {
@@ -4902,6 +4817,7 @@ Newsletter section end
 
 .footer-widget .widget-logo {
   margin-bottom: 10px;
+  display: inline-flex;
 }
 .footer-widget ul li {
   line-height: 2.5;
