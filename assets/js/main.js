@@ -89,11 +89,11 @@ $(document).ready(function () {
                     nav: true,
                     dots: false
                 },
-                // 1200: {
-                //     items: 5,
-                //     nav: true,
-                //     dots: false
-                // },
+                1200: {
+                    items: 5,
+                    nav: true,
+                    dots: false
+                },
 
             }
         });
