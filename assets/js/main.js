@@ -259,7 +259,7 @@ function copyTextFunc() {
 // Copy text end
 
 // Social share start
-if ($(".social-share-box").length) {
+if ($("#shareBlock").length) {
     $("#shareBlock").socialSharingPlugin({
         urlShare: window.location.href,
         description: $("meta[name=description]").attr("content"),

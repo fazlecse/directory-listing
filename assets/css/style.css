@@ -420,7 +420,13 @@ option {
   border: 1px solid var(--border-color1);
   height: 45px;
 }
-
+.form-control::-moz-placeholder, .form-select::-moz-placeholder {
+  text-transform: capitalize;
+}
+.form-control::placeholder,
+.form-select::placeholder {
+  text-transform: capitalize;
+}
 .form-control:focus,
 .form-select:focus {
   box-shadow: none;
@@ -537,7 +543,6 @@ img.img-flag {
 
 span.select2.select2-container.select2-container--default {
   width: 100% !important;
-  font-weight: 600;
 }
 
 .select2-container .select2-selection--single,
@@ -999,13 +1004,14 @@ Reusable style section start
 .cmn-box2 {
   gap: 10px;
   display: flex;
+  align-items: center;
   background-color: hsl(var(--white));
   border-radius: 5px;
 }
 .cmn-box2 .icon-box {
-  min-width: 50px;
-  width: 50px;
-  height: 50px;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
   color: var(--primary-color);
   display: flex;
@@ -1282,7 +1288,7 @@ Reusable style section start
   width: 100%;
 }
 .multiple-search-box .input-box .icon {
-  color: var(--heading-color);
+  color: var(--primary-color);
   position: absolute;
   left: 10px;
   top: 50%;
@@ -1429,53 +1435,9 @@ Reusable style section start
 /*----------------------------------------------
 Offcanvas section start 
 ----------------------------------------------*/
-.offcanvas {
-  background: var(--black);
-  color: hsl(var(--white));
-}
-.offcanvas .cmn-btn-close {
-  background-color: transparent;
-  color: hsl(var(--white));
-}
-.offcanvas .widget-title h6 {
-  color: hsl(var(--white));
-}
-.offcanvas .nice-select {
-  background-color: var(--bg-color4);
-  color: hsl(var(--white));
-  border-color: var(--border-color3);
-}
-.offcanvas .nice-select option {
-  background-color: var(--bg-color4);
-}
-.offcanvas .form-control,
-.offcanvas .form-select {
-  background-color: var(--bg-color4);
-  border-color: var(--border-color3);
-  color: hsl(var(--white));
-}
-.offcanvas .form-control::-moz-placeholder, .offcanvas .form-select::-moz-placeholder {
-  color: hsl(var(--white));
-}
-.offcanvas .form-control::placeholder,
-.offcanvas .form-select::placeholder {
-  color: hsl(var(--white));
-}
-.offcanvas .accordion {
-  --bs-accordion-bg: var(--black);
-}
 .offcanvas .accordion-button {
-  color: hsl(var(--white));
-}
-.offcanvas .accordion-button::after {
-  background-image: url(../img/accordion/down-arrow-white.png);
-}
-.offcanvas .checkbox-categories-area .form-check .form-check-label {
-  color: hsl(var(--white));
-}
-
-.offcanvas-title {
-  color: hsl(var(--white));
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .offcanvas.offcanvas-end {
@@ -1562,7 +1524,7 @@ Offcanvas end
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   font-family: var(--heading-font);
   gap: 5px;
@@ -1583,7 +1545,7 @@ Offcanvas end
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   font-family: var(--heading-font);
   color: hsl(var(--white));
@@ -1608,12 +1570,33 @@ Offcanvas end
   justify-content: center;
   text-transform: capitalize;
   gap: 5px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .cmn-btn3:hover {
   color: var(--primary-color);
   box-shadow: var(--shadow2);
   border: 1px solid var(--border-color2);
+}
+
+.cmn-btn4 {
+  background-color: var(--primary-color);
+  color: hsl(var(--white));
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color1);
+  transition: var(--transition);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  gap: 5px;
+  font-weight: 500;
+}
+.cmn-btn4:hover {
+  color: hsl(var(--white));
+  box-shadow: var(--shadow2);
+  background-color: var(--btn-hover-bg);
 }
 
 .rtl .cmn-btn3 img {
@@ -3519,10 +3502,11 @@ Padding bottom
   background-color: var(--heading-color);
 }
 .navbar.active .get-start-btn {
-  color: var(--heading-color);
+  background-color: var(--primary-color);
 }
 .navbar.active .get-start-btn:hover {
   color: hsl(var(--white));
+  background-color: var(--btn-hover-bg);
 }
 .navbar.active .notification-panel .dropdown-toggle i {
   color: var(--heading-color);
@@ -3956,6 +3940,7 @@ Category section start
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 }
 .listing-box .category {
   display: flex;
@@ -4665,7 +4650,7 @@ Author section2 end
   transition: var(--transition);
   position: absolute;
   right: 5px;
-  background-color: var(--primary-color);
+  background-color: var(--black);
   height: calc(100% - 10px);
   border-radius: 9999px;
   padding: 10px 40px;
@@ -5569,20 +5554,20 @@ Products section end
 /*----------------------------------------------
 Product details section start
 ----------------------------------------------*/
-.product-details-section {
-  background-color: var(--bg-color3);
+.listing-details-section {
+  background-color: var(--bg-color2);
 }
-.product-details-section .section-header .location {
+.listing-details-section .section-header .location {
   display: flex;
   align-items: center;
   gap: 7px;
   font-weight: 600;
 }
-.product-details-section .section-header .location i {
+.listing-details-section .section-header .location i {
   font-size: 20px;
   color: var(--primary-color);
 }
-.product-details-section .accordion-button::after {
+.listing-details-section .accordion-button::after {
   background: url(../img/accordion/plus.png);
   width: 25px;
   height: 25px;
@@ -5592,7 +5577,7 @@ Product details section start
   background-position: center;
   border-radius: 5px;
 }
-.product-details-section .accordion-button:not(.collapsed)::after {
+.listing-details-section .accordion-button:not(.collapsed)::after {
   background: url(../img/accordion/minus.png);
   width: 25px;
   height: 25px;
@@ -5602,7 +5587,35 @@ Product details section start
   background-position: center;
   border-radius: 5px;
 }
-.product-details-section .map-section iframe {
+.listing-details-section .share {
+  position: relative;
+}
+.listing-details-section .share:hover #shareBlock {
+  opacity: 1;
+  visibility: visible;
+}
+.listing-details-section .share #shareBlock {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 212px;
+  background-color: hsl(var(--white));
+  padding: 10px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
+  bottom: 40px;
+  left: 0;
+}
+.listing-details-section .share #shareBlock .btn-light {
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
+}
+.listing-details-section .map-section iframe {
   border-radius: 5px;
   border: 1px solid var(--border-color1) !important;
 }

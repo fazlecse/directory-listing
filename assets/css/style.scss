@@ -663,16 +663,16 @@ option {
     background-color: var(--input-color);
     border: 1px solid var(--border-color1);
     height: 45px;
+
+    &::placeholder {
+        text-transform: capitalize;
+    }
+
+    &:focus {
+        box-shadow: none;
+        border: 1px solid var(--primary-color);
+    }
 }
-
-
-.form-control:focus,
-.form-select:focus {
-    box-shadow: none;
-    border: 1px solid var(--primary-color);
-    // color: hsl(var(--white));
-}
-
 
 .form-check label,
 .form-check-input {
@@ -799,7 +799,7 @@ img.img-flag {
 
 span.select2.select2-container.select2-container--default {
     width: 100% !important;
-    font-weight: 600;
+    // font-weight: 600;
 }
 
 .select2-container .select2-selection--single,
@@ -1399,13 +1399,14 @@ Reusable style section start
 .cmn-box2 {
     gap: 10px;
     display: flex;
+    align-items: center;
     background-color: hsl(var(--white));
     border-radius: 5px;
 
     .icon-box {
-        min-width: 50px;
-        width: 50px;
-        height: 50px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
         border-radius: 5px;
         color: var(--primary-color);
         display: flex;
@@ -1765,7 +1766,7 @@ Reusable style section start
         width: 100%;
 
         .icon {
-            color: var(--heading-color);
+            color: var(--primary-color);
             position: absolute;
             left: 10px;
             top: 50%;
@@ -1958,59 +1959,10 @@ Reusable style section start
 Offcanvas section start 
 ----------------------------------------------*/
 .offcanvas {
-    background: var(--black);
-    color: hsl(var(--white));
-
-    .cmn-btn-close {
-        background-color: transparent;
-        color: hsl(var(--white));
-    }
-
-    .widget-title h6 {
-        color: hsl(var(--white));
-    }
-
-    .nice-select {
-        background-color: var(--bg-color4);
-        color: hsl(var(--white));
-        border-color: var(--border-color3);
-
-        option {
-            background-color: var(--bg-color4);
-        }
-    }
-
-    .form-control,
-    .form-select {
-        background-color: var(--bg-color4);
-        border-color: var(--border-color3);
-        color: hsl(var(--white));
-
-        &::placeholder {
-            color: hsl(var(--white));
-        }
-    }
-
-    .accordion {
-        --bs-accordion-bg: var(--black);
-    }
-
     .accordion-button {
-        color: hsl(var(--white));
-
-        &::after {
-            background-image: url(../img/accordion/down-arrow-white.png);
-        }
+        font-size: 16px;
+        font-weight: 500;
     }
-
-    .checkbox-categories-area .form-check .form-check-label {
-        color: hsl(var(--white));
-    }
-
-}
-
-.offcanvas-title {
-    color: hsl(var(--white));
 }
 
 .offcanvas.offcanvas-end {
@@ -2117,7 +2069,7 @@ Offcanvas end
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
     font-family: var(--heading-font);
     gap: 5px;
@@ -2140,7 +2092,7 @@ Offcanvas end
     align-items: center;
     justify-content: center;
     gap: 5px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
     font-family: var(--heading-font);
     color: hsl(var(--white));
@@ -2167,12 +2119,34 @@ Offcanvas end
     justify-content: center;
     text-transform: capitalize;
     gap: 5px;
-    font-weight: 600;
+    font-weight: 500;
 
     &:hover {
         color: var(--primary-color);
         box-shadow: var(--shadow2);
         border: 1px solid var(--border-color2);
+    }
+}
+
+.cmn-btn4 {
+    background-color: var(--primary-color);
+    color: hsl(var(--white));
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color1);
+    transition: var(--transition);
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    gap: 5px;
+    font-weight: 500;
+
+    &:hover {
+        color: hsl(var(--white));
+        box-shadow: var(--shadow2);
+        background-color: var(--btn-hover-bg);
     }
 }
 
@@ -4555,16 +4529,18 @@ Padding bottom
     }
 
     .get-start-btn {
-        color: var(--heading-color);
-
         &:hover {
             color: hsl(var(--white));
+            background-color: var(--btn-hover-bg);
         }
+
+        background-color: var(--primary-color);
     }
 
     .notification-panel .dropdown-toggle i {
         color: var(--heading-color);
     }
+
 
 }
 
@@ -5127,6 +5103,7 @@ Category section start
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 5px;
     }
 
     .category {
@@ -6064,7 +6041,7 @@ Author section2 end
             transition: var(--transition);
             position: absolute;
             right: 5px;
-            background-color: var(--primary-color);
+            background-color: var(--black);
             height: calc(100% - 10px);
             border-radius: 9999px;
             padding: 10px 40px;
@@ -7280,8 +7257,8 @@ Products section end
 /*----------------------------------------------
 Product details section start
 ----------------------------------------------*/
-.product-details-section {
-    background-color: var(--bg-color3);
+.listing-details-section {
+    background-color: var(--bg-color2);
 
     .section-header {
         .location {
@@ -7320,6 +7297,39 @@ Product details section start
                 background-position: center;
                 border-radius: 5px;
             }
+        }
+    }
+
+    .share {
+        position: relative;
+        &:hover {
+            #shareBlock {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        #shareBlock {
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            position: absolute;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 212px;
+            background-color: hsl(var(--white));
+            padding: 10px;
+            border: 1px solid var(--border-color1);
+            box-shadow: var(--shadow1);
+            border-radius: 5px;
+            bottom: 40px;
+            left: 0;
+            .btn-light{
+                font-size: 10px;
+                width: 40px;
+                height: 40px;
+            }
+
         }
     }
 
