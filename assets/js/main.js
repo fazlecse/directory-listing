@@ -20,8 +20,7 @@ window.addEventListener('scroll', () => {
 
 $(document).ready(function () {
 
-    $(function (e) {
-        "use strict";
+    "use strict";
         // Testimonial section start
         // Owl carousel 
         $('.testimonial-carousel').owlCarousel({
@@ -97,7 +96,41 @@ $(document).ready(function () {
 
             }
         });
-    });
+        // Category-slider carousel
+        $('.listing-slider').owlCarousel({
+            loop: true,
+            autoplay: false,
+            margin: 20,
+            responsiveClass: true,
+            dots: false,
+            nav: true,
+            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+            // rtl: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
+                },
+                600: {
+                    items: 3,
+                    nav: false,
+                    dots: true,
+                    dotsEach: 3
+                },
+                768: {
+                    nav: true,
+                    dots: false
+                },
+                992: {
+                    items: 4,
+                    nav: true,
+                    dots: false
+                },
+
+            }
+        });
 
 
     // cmn select2 start

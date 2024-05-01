@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Author        :
 Author Uri    :
@@ -2207,7 +2208,16 @@ hr.divider:after {
 .cmn-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+}
+.cmn-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.cmn-list .item:not(:last-child) {
+  border-bottom: 1px dashed var(--border-color2);
 }
 
 .rtl .cmn-list .item:not(:last-child)::after {
@@ -2215,13 +2225,61 @@ hr.divider:after {
   right: 12px;
 }
 
-.ratings li i {
+.reviews li i {
   color: #dee2e8;
-  color: var();
 }
-.ratings li .active {
+.reviews li .active {
   color: var(--orange);
   opacity: 1;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 5px;
+}
+.ratings:not(:checked) > input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.ratings:not(:checked) > label {
+  cursor: pointer;
+  font-size: 36px;
+  color: #dee2e8;
+}
+.ratings:not(:checked) > label:before {
+  content: "★";
+}
+.ratings > input:checked + label:hover, .ratings > input:checked + label:hover ~ label, .ratings > input:checked ~ label:hover, .ratings > input:checked ~ label:hover ~ label, .ratings > label:hover ~ input:checked ~ label {
+  color: var(--orange);
+}
+.ratings:not(:checked) > label:hover, .ratings:not(:checked) > label:hover ~ label {
+  color: var(--orange);
+}
+.ratings > input:checked ~ label {
+  color: var(--orange);
+}
+
+.average-review .card-box {
+  text-align: center;
+}
+.average-review .card-box i {
+  color: var(--orange);
+  font-size: 14px;
+}
+.average-review .index {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.average-review .progress {
+  width: 100%;
+  height: 10px;
+}
+.average-review .progress .progress-bar {
+  background: var(--primary-color);
 }
 
 .countdown-area {
@@ -4602,7 +4660,7 @@ Author section2 end
 }
 .newsletter-section .newsletter-section-inner {
   background-color: var(--primary-color);
-  padding: 30px;
+  padding: 50px;
   border-radius: 15px;
   position: relative;
   z-index: 0;
@@ -5619,6 +5677,17 @@ Product details section start
   border-radius: 5px;
   border: 1px solid var(--border-color1) !important;
 }
+.listing-details-section .author-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.listing-details-section .author-profile .img-box img {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
 
 .feature-list {
   margin-top: 20px;
@@ -5634,6 +5703,12 @@ Product details section start
   color: var(--primary-color);
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.review-item {
+  border: 1px solid var(--border-color1);
+  padding: 20px 15px;
+  border-radius: 10px;
 }
 
 /*----------------------------------------------
@@ -5677,25 +5752,30 @@ Author section end
 .pricing-section {
   position: relative;
   z-index: 0;
-  background-color: var(--bg-color3);
+  background-color: var(--bg-color1);
 }
 
 .pricing-box {
   position: relative;
-  border-radius: 10px;
+  border-radius: 25px;
   background: hsl(var(--white));
   box-shadow: var(--shadow3);
   padding: 45px 32px 32px;
+  transition: var(--transition);
+}
+.pricing-box:hover {
+  transform: scale(1.01);
 }
 .pricing-box .featured-title {
   position: absolute;
-  background: var(--primary-color);
+  background: hsl(var(--base)/0.1);
   top: 15px;
   right: 15px;
   padding: 4px 15px;
   border-radius: 5px;
-  color: hsl(var(--white));
+  color: var(--primary-color);
   text-transform: capitalize;
+  font-weight: 500;
 }
 .pricing-box .section-header {
   margin-bottom: 0;
@@ -5721,8 +5801,6 @@ Author section end
   font-size: 20px;
   margin: 20px 0;
   font-family: var(--heading-font);
-  background-color: hsl(var(--base)/0.1);
-  padding: 10px 20px;
   border-radius: 5px;
 }
 .pricing-box .section-body .title .price {
@@ -5731,9 +5809,6 @@ Author section end
 }
 .pricing-box .section-body .title span {
   font-weight: 600;
-}
-.pricing-box .section-body .pricing-feature {
-  margin-bottom: 32px;
 }
 .pricing-box .section-body .pricing-feature li i {
   color: var(--primary-color);

@@ -2898,7 +2898,19 @@ hr.divider:after {
 .cmn-list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+
+        &:not(:last-child) {
+            border-bottom: 1px dashed var(--border-color2);
+        }
+    }
+
 }
 
 // Rtl cmn list section start
@@ -2912,11 +2924,10 @@ hr.divider:after {
 // Rtl cmn list section end
 // Cmn list section end
 
-// Ratings section start
-.ratings li {
+// Reviews section start
+.reviews li {
     i {
         color: #dee2e8;
-        color: var();
     }
 
     .active {
@@ -2926,7 +2937,78 @@ hr.divider:after {
 }
 
 
+// Reviews section end
+
+// Ratings section start
+.ratings {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 5px;
+
+    &:not(:checked)>input {
+        position: absolute;
+        appearance: none;
+    }
+
+    &:not(:checked)>label {
+        cursor: pointer;
+        font-size: 36px;
+        color: #dee2e8;
+    }
+
+    &:not(:checked)>label:before {
+        content: "★";
+    }
+
+    &>input:checked+label:hover,
+    &>input:checked+label:hover~label,
+    &>input:checked~label:hover,
+    &>input:checked~label:hover~label,
+    &>label:hover~input:checked~label {
+        color: var(--orange);
+    }
+
+    &:not(:checked)>label:hover,
+    &:not(:checked)>label:hover~label {
+        color: var(--orange);
+    }
+
+    &>input:checked~label {
+        color: var(--orange);
+    }
+}
+
 // Ratings section end
+// Average review section start
+.average-review {
+    .card-box {
+        text-align: center;
+
+        i {
+            color: var(--orange);
+            font-size: 14px;
+        }
+    }
+
+    .index {
+        display: inline-block;
+        margin-bottom: 5px;
+        // width: 20px;
+    }
+
+    .progress {
+        width: 100%;
+        height: 10px;
+
+        .progress-bar {
+            background: var(--primary-color);
+        }
+    }
+}
+
+// Average review section end
+
 // Countdown section start
 .countdown-area {
     display: flex;
@@ -3578,7 +3660,6 @@ user nav Profile end
         border: 1px solid var(--border-color1);
         background-color: hsl(var(--white));
         box-shadow: var(--shadow1);
-
     }
 }
 
@@ -5985,7 +6066,7 @@ Author section2 end
 
     .newsletter-section-inner {
         background-color: var(--primary-color);
-        padding: 30px;
+        padding: 50px;
         border-radius: 15px;
         position: relative;
         z-index: 0;
@@ -7302,6 +7383,7 @@ Product details section start
 
     .share {
         position: relative;
+
         &:hover {
             #shareBlock {
                 opacity: 1;
@@ -7324,7 +7406,8 @@ Product details section start
             border-radius: 5px;
             bottom: 40px;
             left: 0;
-            .btn-light{
+
+            .btn-light {
                 font-size: 10px;
                 width: 40px;
                 height: 40px;
@@ -7337,6 +7420,21 @@ Product details section start
         iframe {
             border-radius: 5px;
             border: 1px solid var(--border-color1) !important;
+        }
+    }
+
+    .author-profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .img-box {
+            img {
+                width: 60px;
+                min-width: 60px;
+                height: 60px;
+                border-radius: 10px;
+            }
         }
     }
 }
@@ -7356,6 +7454,14 @@ Product details section start
         padding: 5px 10px;
         border-radius: 5px;
     }
+
+
+}
+
+.review-item {
+    border: 1px solid var(--border-color1);
+    padding: 20px 15px;
+    border-radius: 10px;
 }
 
 /*----------------------------------------------
@@ -7406,25 +7512,31 @@ Author section end
 .pricing-section {
     position: relative;
     z-index: 0;
-    background-color: var(--bg-color3);
+    background-color: var(--bg-color1);
 }
 
 .pricing-box {
     position: relative;
-    border-radius: 10px;
+    border-radius: 25px;
     background: hsl(var(--white));
     box-shadow: var(--shadow3);
     padding: 45px 32px 32px;
+    transition: var(--transition);
+
+    &:hover {
+        transform: scale(1.01);
+    }
 
     .featured-title {
         position: absolute;
-        background: var(--primary-color);
+        background: hsl(var(--base)/.1);
         top: 15px;
         right: 15px;
         padding: 4px 15px;
         border-radius: 5px;
-        color: hsl(var(--white));
+        color: var(--primary-color);
         text-transform: capitalize;
+        font-weight: 500;
     }
 
     .section-header {
@@ -7455,8 +7567,6 @@ Author section end
             font-size: 20px;
             margin: 20px 0;
             font-family: var(--heading-font);
-            background-color: hsl(var(--base)/.1);
-            padding: 10px 20px;
             border-radius: 5px;
 
             .price {
@@ -7470,7 +7580,6 @@ Author section end
         }
 
         .pricing-feature {
-            margin-bottom: 32px;
 
             li {
                 i {
