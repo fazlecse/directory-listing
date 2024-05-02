@@ -1923,6 +1923,7 @@ section {
   background: var(--bg-color1);
   color: var(--primary-color);
   box-shadow: var(--shadow1);
+  border: 1px solid var(--border-color1);
   border-radius: 5px;
 }
 .social-box li a:hover {
@@ -4639,13 +4640,101 @@ Author section end
   background-color: var(--bg-color1);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow2);
   border: 1px solid var(--border-color1);
   z-index: 0;
-  overflow: hidden;
 }
-.author-box2 .author-box-top .content-area {
-  align-items: initial;
+.author-box2 .left-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.author-box2 .left-side .img-box img {
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: hsl(var(--white));
+  padding: 5px;
+  box-shadow: var(--shadow2);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.author-box2 .right-side {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.author-box2 .right-side .counts {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.author-box2 .right-side .counts .count span {
+  display: block;
+  color: var(--primary-color);
+}
+.author-box2 .cmn-btn4 {
+  padding: 10px 15px;
+  background-color: hsl(var(--white));
+  color: var(--heading-color);
+}
+.author-box2 .cmn-btn4:hover {
+  color: var(--primary-color);
+  border-color: var(--border-color2);
+}
+
+.followers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.followers .follower {
+  position: relative;
+}
+.followers .follower .profile-img-link {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.followers .follower:hover .creator {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 10px);
+}
+.followers .follower img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.followers .follower .creator {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  background-color: hsl(var(--white));
+  padding: 10px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  border-radius: 10px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.followers .follower .creator .cover {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+}
+.followers .follower .creator .profile-img {
+  width: 65px;
+  height: 65px;
+  margin-top: -35px;
 }
 
 /*----------------------------------------------
@@ -5645,34 +5734,6 @@ Product details section start
   background-position: center;
   border-radius: 5px;
 }
-.listing-details-section .share {
-  position: relative;
-}
-.listing-details-section .share:hover #shareBlock {
-  opacity: 1;
-  visibility: visible;
-}
-.listing-details-section .share #shareBlock {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  position: absolute;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 212px;
-  background-color: hsl(var(--white));
-  padding: 10px;
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
-  border-radius: 5px;
-  bottom: 40px;
-  left: 0;
-}
-.listing-details-section .share #shareBlock .btn-light {
-  font-size: 10px;
-  width: 40px;
-  height: 40px;
-}
 .listing-details-section .map-section iframe {
   border-radius: 5px;
   border: 1px solid var(--border-color1) !important;
@@ -5687,6 +5748,35 @@ Product details section start
   min-width: 60px;
   height: 60px;
   border-radius: 10px;
+}
+
+.cmn-btn4.share {
+  position: relative;
+}
+.cmn-btn4.share:hover #shareBlock {
+  opacity: 1;
+  visibility: visible;
+}
+.cmn-btn4.share #shareBlock {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 212px;
+  background-color: hsl(var(--white));
+  padding: 10px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
+  border-radius: 5px;
+  bottom: calc(100% + 5px);
+  left: 0;
+}
+.cmn-btn4.share #shareBlock .btn-light {
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .feature-list {
