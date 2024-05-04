@@ -1,5 +1,4 @@
-
-
+"use strict";
 // Preloader area
 const preloader = document.getElementById("preloader");
 const preloaderFunction = () => {
@@ -19,118 +18,116 @@ window.addEventListener('scroll', () => {
 });
 
 $(document).ready(function () {
+    // Testimonial section start
+    // Owl carousel 
+    $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 20,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true,
+                dotsEach: 3
 
-    "use strict";
-        // Testimonial section start
-        // Owl carousel 
-        $('.testimonial-carousel').owlCarousel({
-            loop: true,
-            autoplay: true,
-            margin: 20,
-            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
-            // rtl: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
+            },
+            600: {
+                items: 1,
+                nav: true,
+                dots: false,
 
-                },
-                600: {
-                    items: 1,
-                    nav: true,
-                    dots: false,
-
-                },
-                1000: {
-                    items: 2,
-                    nav: true,
-                    dots: false,
-                }
+            },
+            1000: {
+                items: 2,
+                nav: true,
+                dots: false,
             }
-        });
-        // Category-slider carousel
-        $('.category-slider').owlCarousel({
-            loop: true,
-            autoplay: false,
-            margin: 20,
-            responsiveClass: true,
-            dots: false,
-            nav: true,
-            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
-            // rtl: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
-                },
-                400: {
-                    items: 2,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
-                },
-                600: {
-                    items: 3,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
-                },
-                768: {
-                    nav: true,
-                    dots: false
-                },
-                992: {
-                    items: 4,
-                    nav: true,
-                    dots: false
-                },
-                1200: {
-                    items: 5,
-                    nav: true,
-                    dots: false
-                },
+        }
+    });
+    // Category-slider carousel
+    $('.category-slider').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        responsiveClass: true,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            400: {
+                items: 2,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            600: {
+                items: 3,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            768: {
+                nav: true,
+                dots: false
+            },
+            992: {
+                items: 4,
+                nav: true,
+                dots: false
+            },
+            1200: {
+                items: 5,
+                nav: true,
+                dots: false
+            },
 
-            }
-        });
-        // Category-slider carousel
-        $('.listing-slider').owlCarousel({
-            loop: true,
-            autoplay: false,
-            margin: 20,
-            responsiveClass: true,
-            dots: false,
-            nav: true,
-            navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
-            // rtl: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
-                },
-                600: {
-                    items: 3,
-                    nav: false,
-                    dots: true,
-                    dotsEach: 3
-                },
-                768: {
-                    nav: true,
-                    dots: false
-                },
-                992: {
-                    items: 3,
-                    nav: true,
-                    dots: false
-                },
+        }
+    });
+    // Category-slider carousel
+    $('.listing-slider').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        responsiveClass: true,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            600: {
+                items: 3,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            768: {
+                nav: true,
+                dots: false
+            },
+            992: {
+                items: 3,
+                nav: true,
+                dots: false
+            },
 
-            }
-        });
+        }
+    });
 
 
     // cmn select2 start
@@ -138,8 +135,6 @@ $(document).ready(function () {
     // cmn select2 end
 
     // cmn-select2 with image start
-    // $(document).ready(function () {
-    // });
     $('.cmn-select2-image').select2({
         templateResult: formatState,
         templateSelection: formatState
@@ -172,6 +167,7 @@ $(document).ready(function () {
         return $state;
     };
     // cmn-select2 with image end
+
     // Cmn select2 tags start
     $(".cmn-select2-tags").select2({
         tags: true
@@ -256,8 +252,6 @@ $(document).ready(function () {
             },
         });
     }
-
-
     // Fancybox carousel section end
 
 
@@ -305,7 +299,6 @@ if ($("#shareBlock").length) {
 
 
 // Nice select start
-
 if ($(".nice-select").length) {
     $('.nice-select').niceSelect();
 }
@@ -332,71 +325,92 @@ if ($("#telephone").length) {
     });
 }
 // International Telephone Input end
+// Dropdown select with Filter end
+if ($(".multiple-search-box").length) {
+    function handleSelect(inputBox, searchInput, searchItem) {
+        searchInput.addEventListener('click', function (event) {
+            inputBox.classList.add('active');
+            event.stopPropagation();
+        });
 
-
-function handleSelect(inputBox, searchInput, searchItem) {
-    searchInput.addEventListener('click', function (event) {
-        inputBox.classList.add('active');
-        event.stopPropagation();
-    });
-
-    window.addEventListener('click', function () {
-        inputBox.classList.remove('active');
-    });
-
-    searchItem.forEach(function (searchItemSingle) {
-        searchItemSingle.addEventListener('click', function () {
-            const text = searchItemSingle.querySelector(".title");
-            const textContent = text.textContent;
-            searchInput.value = textContent;
+        window.addEventListener('click', function () {
             inputBox.classList.remove('active');
+        });
+
+        searchItem.forEach(function (searchItemSingle) {
+            searchItemSingle.addEventListener('click', function () {
+                const text = searchItemSingle.querySelector(".title");
+                const textContent = text.textContent;
+                searchInput.value = textContent;
+                inputBox.classList.remove('active');
+            });
+        });
+    }
+
+    const inputBox = document.querySelector('#input-box');
+    const searchInput = document.querySelector('#search-input');
+    const searchItem = document.querySelectorAll('#search-result .search-item');
+    handleSelect(inputBox, searchInput, searchItem);
+
+    const inputBox2 = document.querySelector('#input-box2');
+    const searchInput2 = document.querySelector('#search-input2');
+    const searchItem2 = document.querySelectorAll('#search-result2 .search-item');
+    handleSelect(inputBox2, searchInput2, searchItem2);
+
+    // filter start 
+
+    function filterItems(inputId, items) {
+        const input = document.getElementById(inputId);
+        const filter = input.value.toUpperCase();
+
+        items.forEach((item) => {
+            const title = item.querySelector(".title");
+            const txtValue = title.textContent || title.innerText;
+
+            if (txtValue.toUpperCase().includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+    const filterSearchInputId = "search-input";
+    const filterSearchInput = document.getElementById(filterSearchInputId);
+    const items = document.querySelectorAll("#search-result .search-item");
+    filterSearchInput.addEventListener("keyup", function () {
+        filterItems(filterSearchInputId, items);
+    })
+
+    const filterSearchInputId2 = "search-input2";
+    const filterSearchInput2 = document.getElementById(filterSearchInputId2);
+    const items2 = document.querySelectorAll("#search-result2 .search-item");
+    filterSearchInput2.addEventListener("keyup", function () {
+        filterItems(filterSearchInputId2, items2);
+    })
+}
+// Dropdown select with Filter end
+
+
+
+// input field show hide password start
+if (document.querySelector('.login-signup-form')) {
+    const passwordBoxes = document.querySelectorAll('.password-box');
+    passwordBoxes.forEach((box) => {
+        const passwordInput = box.querySelector('.password');
+        const passwordIcon = box.querySelector('.password-icon');
+
+        passwordIcon.addEventListener("click", function (event) {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.classList.add('fa-eye-slash');
+                passwordIcon.classList.remove('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.classList.add('fa-eye');
+                passwordIcon.classList.remove('fa-eye-slash');
+            }
         });
     });
 }
 
-const inputBox = document.querySelector('#input-box');
-// const soValue = document.querySelector('#search-input');
-const searchInput = document.querySelector('#search-input');
-const searchItem = document.querySelectorAll('#search-result .search-item');
-handleSelect(inputBox, searchInput, searchItem);
-
-const inputBox2 = document.querySelector('#input-box2');
-// const soValue = document.querySelector('#search-input');
-const searchInput2 = document.querySelector('#search-input2');
-const searchItem2 = document.querySelectorAll('#search-result2 .search-item');
-handleSelect(inputBox2, searchInput2, searchItem2);
-
-// filter start 
-
-function filterItems(inputId, items) {
-    const input = document.getElementById(inputId);
-    const filter = input.value.toUpperCase();
-
-    items.forEach((item) => {
-        const title = item.querySelector(".title");
-        const txtValue = title.textContent || title.innerText;
-
-        if (txtValue.toUpperCase().includes(filter)) {
-            item.style.display = "";
-        } else {
-            item.style.display = "none";
-        }
-    });
-}
-const filterSearchInputId = "search-input";
-const filterSearchInput = document.getElementById(filterSearchInputId);
-const items = document.querySelectorAll("#search-result .search-item");
-filterSearchInput.addEventListener("keyup", function () {
-    filterItems(filterSearchInputId, items);
-})
-
-const filterSearchInputId2 = "search-input2";
-const filterSearchInput2 = document.getElementById(filterSearchInputId2);
-const items2 = document.querySelectorAll("#search-result2 .search-item");
-filterSearchInput2.addEventListener("keyup", function () {
-    filterItems(filterSearchInputId2, items2);
-})
-// Dropdown select with Filter start
-
-
-
+// input field show hide password end

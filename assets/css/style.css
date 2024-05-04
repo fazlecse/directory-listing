@@ -714,6 +714,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .owl-stage-outer {
   position: relative;
+  padding: 20px 0;
 }
 
 .owl-carousel:hover .owl-nav .owl-prev,
@@ -3851,6 +3852,7 @@ Hero section end
 Category section start
 ----------------------------------------------*/
 .category-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -4309,7 +4311,7 @@ How it works section end
 .faq-section .accordion-button {
   color: var(--heading-color);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px !important;
 }
 .faq-section .accordion-button:focus {
@@ -5081,6 +5083,7 @@ Banner end
 }
 .contact-area .thumbs-area {
   max-width: 300px;
+  margin: auto;
 }
 
 .contact-item-list {
@@ -5147,25 +5150,19 @@ Map section end
 24. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
   position: relative;
   z-index: 0;
-}
-.login-signup-page::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: hsl(var(--base)/0.05);
-  z-index: -1;
+  background-image: url(../img/login-signup/bg7-l.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
 }
 
 .login-signup-form {
   padding: 30px;
   background-color: var(--bg-color1);
-  border-radius: 5px;
+  border-radius: 25px;
   z-index: 1;
   position: relative;
   border: 1px solid var(--border-color1);
@@ -5313,7 +5310,6 @@ Login Signup end
 }
 
 .sidebar-categories-area li {
-  border-bottom: 1px solid var(--border-color1);
   padding: 10px 0;
 }
 .sidebar-categories-area li a {
@@ -5329,6 +5325,12 @@ Login Signup end
 }
 .sidebar-categories-area li:first-child {
   padding-top: 0;
+}
+.sidebar-categories-area li:last-child {
+  padding-bottom: 0;
+}
+.sidebar-categories-area li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color1);
 }
 
 .tag-list .item {
@@ -5738,12 +5740,13 @@ Product details section start
   border-radius: 5px;
   border: 1px solid var(--border-color1) !important;
 }
-.listing-details-section .author-profile {
+
+.author-profile {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.listing-details-section .author-profile .img-box img {
+.author-profile .img-box img {
   width: 60px;
   min-width: 60px;
   height: 60px;
