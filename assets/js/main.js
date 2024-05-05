@@ -36,6 +36,13 @@ $(document).ready(function () {
             },
             600: {
                 items: 1,
+                nav: false,
+                dots: true,
+                dotsEach: 2
+
+            },
+            768: {
+                items: 1,
                 nav: true,
                 dots: false,
 
@@ -62,20 +69,15 @@ $(document).ready(function () {
                 items: 1,
                 nav: false,
                 dots: true,
-                dotsEach: 3
+                dotsEach: 4 
             },
             400: {
                 items: 2,
                 nav: false,
                 dots: true,
-                dotsEach: 3
+                dotsEach: 4
             },
-            600: {
-                items: 3,
-                nav: false,
-                dots: true,
-                dotsEach: 3
-            },
+
             768: {
                 nav: true,
                 dots: false
@@ -111,14 +113,15 @@ $(document).ready(function () {
                 dotsEach: 3
             },
             600: {
-                items: 3,
+                items: 2,
                 nav: false,
                 dots: true,
                 dotsEach: 3
             },
             768: {
                 nav: true,
-                dots: false
+                dots: false,
+                items: 2,
             },
             992: {
                 items: 3,

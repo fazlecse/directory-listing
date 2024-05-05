@@ -17,7 +17,7 @@ Version       : 1.0
 07. Destination section start
 08. latest ads section start
 09. Multiple search section start
-10. Products section start
+10. Listing section start
 11. Product details page start
 12. Ad section2 start
 13. Ad section3 start
@@ -1218,6 +1218,10 @@ Reusable style section start
   }
 }
 
+.multiple-search-section {
+  margin-top: 50px;
+}
+
 .multiple-search-box-wrapper {
   position: relative;
   padding: 20px;
@@ -1391,14 +1395,36 @@ Reusable style section start
   background-color: var(--btn-hover-bg);
 }
 
-@media (max-width: 767px) {
-  .multiple-search-box {
+@media (max-width: 991px) {
+  .multiple-search-section {
+    margin-top: 30px;
+  }
+  .multiple-search-box-wrapper::after {
     border-radius: 15px;
+  }
+  .multiple-search-box {
+    border-radius: 10px;
+  }
+  .multiple-search-box .input-box:not(:last-of-type) {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color1);
   }
   .multiple-search-box-inner {
     background-color: transparent;
     flex-direction: column;
-    gap: 10px;
+  }
+  .multiple-search-box-inner .form-control {
+    background-color: hsl(var(--white));
+    border-radius: 9999999px;
+  }
+  .multiple-search-btn {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .multiple-search-box-inner {
+    background-color: transparent;
+    flex-direction: column;
   }
   .multiple-search-box-inner .form-control {
     background-color: hsl(var(--white));
@@ -1892,6 +1918,7 @@ section {
   text-transform: capitalize;
   position: relative;
   margin-left: 15px;
+  z-index: -1;
 }
 .section-subtitle::after {
   position: absolute;
@@ -3571,6 +3598,9 @@ Padding bottom
 .navbar.active .notification-panel .dropdown-toggle i {
   color: var(--heading-color);
 }
+.navbar.active .navbar-toggler {
+  color: var(--body-color);
+}
 
 .navbar {
   transition: var(--transition);
@@ -3849,8 +3879,12 @@ Bottom Mobile, Tab nav end
 Hero section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Category section start
+04. Category section start
 ----------------------------------------------*/
+.category-section {
+  overflow: hidden;
+}
+
 .category-box {
   position: relative;
   display: flex;
@@ -3902,19 +3936,15 @@ Category section start
 }
 
 /*----------------------------------------------
-00. Category section end
+Category section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Featured section start
+05. Featured section start
 ----------------------------------------------*/
 .featured-section {
   background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
-}
-
-.product-slider .owl-stage-outer {
-  padding: 10px 0;
 }
 
 .listing-box {
@@ -4088,17 +4118,9 @@ Featured section end
   color: hsl(var(--white));
 }
 
-@media (max-width: 1199px) {
-  .about-section .thumbs-area .about-image {
-    height: 500px;
-  }
-}
 @media (max-width: 767px) {
   .about-section {
     text-align: center;
-  }
-  .about-section .thumbs-area .about-image {
-    padding-right: 0;
   }
   .about-section .about-content .item-list-container .item {
     flex-direction: column;
@@ -4109,11 +4131,6 @@ Featured section end
   .experience {
     right: 30px;
     bottom: 30px;
-  }
-}
-@media (max-width: 575px) {
-  .about-section .thumbs-area .about-image {
-    height: 450px;
   }
 }
 .rtl .about-section .thumbs-area .about-image {
@@ -4135,112 +4152,6 @@ Featured section end
 
 /*----------------------------------------------
 About section end
-----------------------------------------------*/
-/*----------------------------------------------
-06. Service section start
-----------------------------------------------*/
-.service-section {
-  position: relative;
-  background-image: url(../img/background/Wave-Line-2.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.service-section-inner {
-  padding: 50px 30px;
-  border-radius: 30px;
-  background-color: var(--primary-color-opacity-low);
-}
-
-@media (max-width: 575px) {
-  .service-section-inner {
-    padding: 30px 15px;
-  }
-}
-/*----------------------------------------------
-Service section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Service page start
-----------------------------------------------*/
-.search-area {
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  background-color: var(--bg-color3);
-}
-
-.search-area :is(.form-control, .form-select, .cmn-btn) {
-  height: 50px;
-  padding-left: 20px;
-}
-
-.service-page-area {
-  background: var(--bg-color1);
-}
-.service-page-area .accordion-item {
-  margin-bottom: 15px;
-  border: none;
-}
-.service-page-area .accordion-button {
-  border-left: 2px solid transparent;
-  background-color: var(--bg-color3);
-  color: hsl(var(--white));
-}
-.service-page-area .accordion-button:focus,
-.service-page-area .accordion-button:not(.collapsed) {
-  box-shadow: none;
-  background: var(--bg-color4);
-  border-left: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-.service-page-area .accordion-body {
-  padding: 10px;
-  border-left: 2px solid var(--primary-color);
-  background-color: var(--bg-color3);
-}
-.service-page-area tbody,
-.service-page-area td,
-.service-page-area tfoot,
-.service-page-area th,
-.service-page-area thead,
-.service-page-area tr {
-  border: none;
-}
-.service-page-area .table i {
-  color: var(--primary-color);
-}
-.service-page-area .table tr th,
-.service-page-area td {
-  padding: 10px 12px !important;
-  color: hsl(var(--white));
-}
-.service-page-area .table tr th {
-  font-weight: 500;
-}
-
-.table {
-  margin-bottom: 0;
-  color: hsl(var(--white));
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  color: hsl(var(--white));
-}
-
-.rtl .service-page-area .accordion-button:focus,
-.rtl .service-page-area .accordion-button:not(.collapsed) {
-  border-left: none;
-  border-right: 2px solid var(--primary-color);
-}
-.rtl .service-page-area .accordion-body {
-  border-left: none;
-  border-right: 2px solid var(--primary-color);
-}
-
-/*----------------------------------------------
-Service page end
 ----------------------------------------------*/
 /*----------------------------------------------
 07. How it works section start
@@ -4279,6 +4190,7 @@ Service page end
 .workflow-progress .map-icon {
   bottom: 6px;
   right: -10px;
+  z-index: 1;
   position: absolute;
 }
 
@@ -4294,6 +4206,17 @@ Service page end
   .workflow-progress .map-icon {
     bottom: 15px;
     right: -10px;
+  }
+}
+@media (max-width: 1199px) {
+  .workflow-progress .map-icon {
+    bottom: -50px;
+    right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .workflow-progress {
+    display: none;
   }
 }
 /*----------------------------------------------
@@ -4372,6 +4295,7 @@ Faq end
   background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
+  overflow: hidden;
 }
 .testimonial-section .testimonial-box {
   position: relative;
@@ -4425,16 +4349,6 @@ Faq end
 
 /*----------------------------------------------
 Testimonial end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Payment section start
-----------------------------------------------*/
-.payment-section .image-area img {
-  border-radius: 5px;
-}
-
-/*----------------------------------------------
-Payment section end
 ----------------------------------------------*/
 /*----------------------------------------------
 18. Blog section start
@@ -4499,9 +4413,9 @@ Payment section end
   transition: var(--transition);
   transform: scale(1.03);
   width: 100%;
-  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 3/2;
 }
 .blog-box .img-box .category {
   position: absolute;
@@ -4613,7 +4527,7 @@ Blog section end
 }
 
 @media (max-width: 767px) {
-  .author-section {
+  .author-box {
     text-align: center;
   }
   .author-box-top {
@@ -4739,6 +4653,17 @@ Author section end
   margin-top: -35px;
 }
 
+@media (max-width: 767px) {
+  .author-box2 .left-side {
+    flex-direction: column;
+  }
+  .author-box2 .left-side .contact-item {
+    justify-content: center;
+  }
+  .author-box2 {
+    text-align: center;
+  }
+}
 /*----------------------------------------------
 Author section2 end
 ----------------------------------------------*/
@@ -4977,7 +4902,7 @@ Newsletter section end
 }
 
 /*----------------------------------------------
-Footer end
+Footer section end
 ----------------------------------------------*/
 /*----------------------------------------------
 21. Copyright section start
@@ -5150,13 +5075,21 @@ Map section end
 24. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
-  background-color: var(--bg-color2);
   position: relative;
   z-index: 0;
   background-image: url(../img/login-signup/bg7-l.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+}
+.login-signup-page::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.93);
 }
 
 .login-signup-form {
@@ -5595,7 +5528,7 @@ Policy section end
 Error end
 ----------------------------------------------*/
 /*----------------------------------------------
-10. Products section start
+10. Listing section start
 ----------------------------------------------*/
 .listing-section {
   background-color: var(--bg-color2);
@@ -5626,7 +5559,6 @@ Error end
   padding-bottom: 15px;
 }
 .listing-section .map-section iframe {
-  height: calc(100vh - 80px);
   border: 1px solid var(--border-color1);
   border-radius: 5px;
 }
@@ -5678,14 +5610,13 @@ Error end
   border: 1px solid var(--border-color1);
 }
 
-@media (min-width: 1200px) {
-  .sidebar {
-    position: sticky;
-    top: 80px;
-  }
+@media (min-width: 992px) {
   .listing-section .map-section {
     position: sticky;
     top: 80px;
+  }
+  .listing-section .map-section iframe {
+    height: calc(100vh - 80px);
   }
 }
 .rtl .sidebar .widget-title::before {
@@ -5698,10 +5629,10 @@ Error end
 }
 
 /*----------------------------------------------
-Products section end
+Listing section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Product details section start
+Listing details section start
 ----------------------------------------------*/
 .listing-details-section {
   background-color: var(--bg-color2);
@@ -5774,7 +5705,7 @@ Product details section start
   box-shadow: var(--shadow1);
   border-radius: 5px;
   bottom: calc(100% + 5px);
-  left: 0;
+  right: 0;
 }
 .cmn-btn4.share #shareBlock .btn-light {
   font-size: 10px;
@@ -5805,7 +5736,17 @@ Product details section start
 }
 
 /*----------------------------------------------
-Product details section end
+Listing details section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Related listing section end
+----------------------------------------------*/
+.related-listing-section {
+  overflow: hidden;
+}
+
+/*----------------------------------------------
+Related listing section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Author section start
