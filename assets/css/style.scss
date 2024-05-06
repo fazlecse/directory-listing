@@ -1667,7 +1667,7 @@ Reusable style section start
     .search-box2 {
 
         .form-control {
-            padding: 6px 12px 6px 85px;
+            padding: 6px 12px 6px 115px;
         }
 
         .search-btn2 {
@@ -1976,6 +1976,30 @@ Reusable style section start
         .form-control {
             padding-left: .75rem;
             padding-right: 35px;
+        }
+
+        .input-box {
+            // &:not(:last-of-type) {
+            //     border-right: none;
+            //     border-left: 1px solid var(--border-color1);
+            // }
+
+            .icon {
+                left: auto;
+                right: 10px;
+            }
+        }
+    }
+
+    .select2-container .select2-selection--single,
+    .select2-container .select2-selection--multiple {
+        padding: 0.375rem 25px 0.375rem 15px;
+    }
+
+    @media(min-width:992px) {
+        .multiple-search-box .input-box:not(:last-of-type) {
+            border-right: none;
+            border-left: 1px solid var(--border-color1);
         }
     }
 
@@ -5174,7 +5198,7 @@ Category section end
         overflow: hidden;
 
         img {
-            border-radius: 15px 15px 0 0;
+            // border-radius: 15px 15px 0 0;
             height: 250px;
             display: flex;
             width: 100%;
@@ -5249,28 +5273,36 @@ Category section end
     }
 
 }
+// Responsive listing section start
+@media(min-width: 576px){
 
-.listing-feature-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-
-    .item {
+    .listing-box2 {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        text-transform: capitalize;
+        height: 100%;
+    
+        .image-area {
+            width: 45%;
+            min-width: 45%;
+    
+            img {
+                height: 100%;
+            }
+        }
+    
+        .content-area {
+            flex-grow: 1;
+        }
     }
 }
+
+// Responsive listing section end
 
 // Rtl featured section start
 .rtl {
     .listing-box {
-        .content-area {
-            .rate-area {
-                right: auto;
-                left: 20px;
-            }
+        .rate-area {
+            right: 15px;
+            left: auto;
         }
     }
 }
@@ -5679,7 +5711,7 @@ Testimonial end
 .blog-btn {
     margin-top: 20px;
     text-transform: capitalize;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 5px;
     transition: var(--transition);
@@ -5789,8 +5821,9 @@ Testimonial end
 
 .meta {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 15px;
-    gap: 60px;
+    gap: 10px;
     font-size: 14px;
 
     .item {
@@ -5821,7 +5854,7 @@ Testimonial end
 .rtl {
     .blog-btn {
         i {
-            transform: rotate(-90deg);
+            transform: rotate(180deg);
         }
     }
 
@@ -5988,7 +6021,15 @@ Author section end
             color: var(--primary-color);
             border-color: var(--border-color2);
         }
+
+        &.share {
+            #shareBlock {
+                right: 0;
+                left: auto;
+            }
+        }
     }
+
 }
 
 .followers {
@@ -6057,12 +6098,24 @@ Author section end
             justify-content: center;
         }
     }
-    .author-box2{
+
+    .author-box2 {
         text-align: center;
     }
 
 }
 
+// Rtl author box2 start
+.rtl {
+    .author-box2 {
+        .cmn-btn4.share #shareBlock {
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
+// Rtl author box2 end
 /*----------------------------------------------
 Author section2 end
 ----------------------------------------------*/
@@ -7442,7 +7495,7 @@ Listing details section start
         box-shadow: var(--shadow1);
         border-radius: 5px;
         bottom: calc(100% + 5px);
-        right: 0;
+        left: 0;
 
         .btn-light {
             font-size: 10px;
@@ -7478,6 +7531,18 @@ Listing details section start
     border-radius: 10px;
 }
 
+// Rtl listing details section start
+.rtl {
+
+    .cmn-btn4.share {
+        #shareBlock {
+            right: auto;
+            right: 0;
+        }
+    }
+}
+
+// Rtl listing details section end
 /*----------------------------------------------
 Listing details section end
 ----------------------------------------------*/

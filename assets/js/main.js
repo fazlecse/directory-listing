@@ -69,7 +69,7 @@ $(document).ready(function () {
                 items: 1,
                 nav: false,
                 dots: true,
-                dotsEach: 4 
+                dotsEach: 4
             },
             400: {
                 items: 2,
@@ -360,8 +360,13 @@ if ($(".multiple-search-box").length) {
     const searchItem2 = document.querySelectorAll('#search-result2 .search-item');
     handleSelect(inputBox2, searchInput2, searchItem2);
 
-    // filter start 
+    const inputBox3 = document.querySelector('#input-box3');
+    const searchInput3 = document.querySelector('#search-input3');
+    const searchItem3 = document.querySelectorAll('#search-result3 .search-item');
+    handleSelect(inputBox3, searchInput3, searchItem3);
 
+
+    // filter start 
     function filterItems(inputId, items) {
         const input = document.getElementById(inputId);
         const filter = input.value.toUpperCase();
@@ -389,6 +394,13 @@ if ($(".multiple-search-box").length) {
     const items2 = document.querySelectorAll("#search-result2 .search-item");
     filterSearchInput2.addEventListener("keyup", function () {
         filterItems(filterSearchInputId2, items2);
+    })
+
+    const filterSearchInputId3 = "search-input3";
+    const filterSearchInput3 = document.getElementById(filterSearchInputId3);
+    const items3 = document.querySelectorAll("#search-result3 .search-item");
+    filterSearchInput3.addEventListener("keyup", function () {
+        filterItems(filterSearchInputId3, items3);
     })
 }
 // Dropdown select with Filter end

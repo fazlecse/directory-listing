@@ -1,12 +1,15 @@
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=Rajdhani:wght@400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=Rajdhani:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --heading-font: 'Rajdhani', sans-serif;
-    --body-font: 'Nunito Sans', sans-serif;
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Asap", sans-serif;
+    // --heading-font: 'Rajdhani', sans-serif;
+    // --body-font: 'Nunito Sans', sans-serif;
     --primary-color: hsl(var(--base));
     --body-color: #333333;
     --heading-color: #050B20;
@@ -47,10 +50,11 @@ Typography
     --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, .175);
     --transition: all .3s ease-in-out;
 
+
     --base: var(--base-h) var(--base-s) var(--base-l);
-    --base-h: 229.5;
-    --base-s: 87%;
-    --base-l: 54.9%;
+    --base-h: 349.5;
+    --base-s: 100%;
+    --base-l: 47.1%;
 
     --white: var(--white-h) var(--white-s) var(--white-l);
     --white-h: 0;
@@ -486,7 +490,7 @@ textarea.form-control {
 .form-label {
     font-size: 15px;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .form-control {
