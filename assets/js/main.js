@@ -132,6 +132,44 @@ $(document).ready(function () {
         }
     });
 
+    // banner slider start 
+    $('.banner-slider').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        responsiveClass: true,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            600: {
+                items: 2,
+                nav: false,
+                dots: true,
+                dotsEach: 3
+            },
+            768: {
+                nav: true,
+                dots: false,
+                items: 2,
+            },
+            992: {
+                items: 4,
+                nav: true,
+                dots: false
+            },
+
+        }
+    });
+    // banner slider end
+
 
     // cmn select2 start
     $('.cmn-select2').select2();
