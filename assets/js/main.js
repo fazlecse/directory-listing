@@ -135,8 +135,7 @@ $(document).ready(function () {
     // banner slider start 
     $('.banner-slider').owlCarousel({
         loop: true,
-        autoplay: false,
-        margin: 20,
+        autoplay: true,
         responsiveClass: true,
         dots: false,
         nav: true,
@@ -146,21 +145,17 @@ $(document).ready(function () {
             0: {
                 items: 1,
                 nav: false,
-                dots: true,
-                dotsEach: 3
             },
             600: {
                 items: 2,
                 nav: false,
-                dots: true,
-                dotsEach: 3
             },
             768: {
                 nav: true,
                 dots: false,
-                items: 2,
+                items: 3,
             },
-            992: {
+            1200: {
                 items: 4,
                 nav: true,
                 dots: false
@@ -294,6 +289,18 @@ $(document).ready(function () {
         });
     }
     // Fancybox carousel section end
+
+    // magnificPopup start
+    if ($('.magnific-popup').length) {
+        $('.magnific-popup').magnificPopup({
+            type: 'image',
+            delegate: 'a',
+            gallery: {
+                enabled: true
+            }
+        });
+    }
+    // magnificPopup end
 
 
 });
