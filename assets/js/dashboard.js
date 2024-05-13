@@ -10,10 +10,17 @@ const toggleSideMenu = () => {
 };
 // toggleSideMenu end
 
-// input file preview
+// input file preview & reset start
+
+const originalImageSrc = document.getElementById('profile-img').src;
 const previewImage = (id) => {
     document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
 };
+const resetPreviewImage = () => {
+    document.getElementById('profile-img').src = originalImageSrc;
+}
+
+// input file preview & reset end
 
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -78,13 +85,12 @@ $(document).ready(function () {
     });
 
     // Bootstrap datepicker start
-    $('.date').datepicker({
-        // options here
-        format: 'dd/mm/yyyy',
-
-
-
-    });
+    if ($('.date').length) {
+        $('.date').datepicker({
+            // options here
+            format: 'dd/mm/yyyy',
+        });
+    }
     // Bootstrap datepicker end
     //Multi step progress section start
 
@@ -93,38 +99,12 @@ $(document).ready(function () {
 });
 
 // RichTextEditor start
-var editor1cfg = {}
-editor1cfg.toolbar = "basic";
-var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
-// RichTextEditor end
-
-// Dark theme start
-const toggleBtn = document.getElementById("toggle-btn");
-const body = document.querySelector("body");
-toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        localStorage.setItem("dark-theme", 1);
-    } else {
-        localStorage.setItem("dark-theme", 0);
-    }
-    setTheme();
-});
-
-function setTheme() {
-    const isDarkTheme = localStorage.getItem("dark-theme");
-    if (isDarkTheme == 1) {
-        document.querySelector('body').classList.add('dark-theme');
-        document.getElementById("moon").style.display = "none";
-        document.getElementById("sun").style.display = "block";
-    } else {
-        document.querySelector('body').classList.remove('dark-theme');
-        document.getElementById("moon").style.display = "block";
-        document.getElementById("sun").style.display = "none";
-    }
+if ($('#div_editor1').length) {
+    var editor1cfg = {}
+    editor1cfg.toolbar = "basic";
+    var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
 }
-setTheme();
-// Dark theme end
 
+// RichTextEditor end
 
 

@@ -37,8 +37,8 @@ Typography
     --secondary-color-opacity-low: rgb(10, 79, 213, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     --bg-color1: #ffffff;
-    --bg-color2: #050B20;
-    --bg-color3: #F9FBFC;
+    --bg-color2: #F9FBFC;
+    --bg-color3: #050B20;
 
 
     --border-color1: rgba(231, 234, 243, .7);
@@ -2080,7 +2080,7 @@ Cmn table start
                     color: var(--heading-color);
                     padding: 15px 10px;
                     text-transform: capitalize;
-                    background-color: var(--bg-color5);
+                    background-color: var(--bg-color2);
 
                     &:first-child {
                         border-top-left-radius: 10px;
@@ -3741,7 +3741,7 @@ Sidebar start
             transition: transform .2s ease-in-out;
             width: 18px;
             height: 18px;
-            background-color: var(--bg-color3);
+            background-color: var(--bg-color2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4071,6 +4071,8 @@ Account settings profile section start
 
             img {
                 border-radius: 8px;
+                border: 2px solid hsl(var(--white));
+                box-shadow: var(--shadow2);
             }
         }
 

@@ -444,16 +444,18 @@
                                 <div class="profile-details-section">
                                     <div class="d-flex gap-3 align-items-center">
                                         <div class="image-area">
-                                            <img src="assets/img/Person/1.jpg" alt="listpro">
+                                            <img id="profile-img" src="assets/img/Person/1.jpg" alt="listpro">
                                         </div>
                                         <div class="btn-area">
                                             <div class="btn-area-inner d-flex">
                                                 <div class="cmn-file-input">
                                                     <label for="formFile" class="form-label">Upload New
                                                         Photo</label>
-                                                    <input class="form-control" type="file" id="formFile">
+                                                    <input class="form-control" type="file" id="formFile"
+                                                        onchange="previewImage('profile-img')">
                                                 </div>
-                                                <button type="button" class="cmn-btn3">reset</button>
+                                                <button type="button" class="cmn-btn3"
+                                                    onclick="resetPreviewImage()">reset</button>
                                             </div>
                                             <small>Allowed JPG, GIF or PNG. Max size of 800K</small>
                                         </div>
