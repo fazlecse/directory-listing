@@ -5593,6 +5593,7 @@ Testimonial end
     border: 1px solid var(--border-color1);
     box-shadow: var(--shadow1);
     border-radius: 10px;
+    background-color: hsl(var(--white));
 
     &:hover {
         .img-box {
