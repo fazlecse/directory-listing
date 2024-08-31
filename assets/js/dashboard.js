@@ -10,17 +10,7 @@ const toggleSideMenu = () => {
 };
 // toggleSideMenu end
 
-// input file preview & reset start
 
-const originalImageSrc = document.getElementById('profile-img').src;
-const previewImage = (id) => {
-    document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
-};
-const resetPreviewImage = () => {
-    document.getElementById('profile-img').src = originalImageSrc;
-}
-
-// input file preview & reset end
 
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
