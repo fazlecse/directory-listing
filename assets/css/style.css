@@ -1394,6 +1394,7 @@ Reusable style section start
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 .multiple-search-box .search-result .search-item .sub-title {
   font-size: 12px;
@@ -1513,6 +1514,9 @@ Reusable style section start
 /*----------------------------------------------
 Offcanvas section start 
 ----------------------------------------------*/
+.offcanvas {
+  z-index: 1050;
+}
 .offcanvas .accordion-button {
   font-size: 16px;
   font-weight: 500;
@@ -3353,6 +3357,89 @@ Cmn table end
   color: var(--primary-color);
 }
 
+.multiple-dropdown .nav-link i {
+  font-size: 14px;
+  transition: 0.3s;
+}
+.multiple-dropdown .dropdown-menu {
+  overflow: visible;
+  padding: 4px;
+  overflow: auto;
+}
+.multiple-dropdown .dropdown-menu .dropdown-item {
+  padding: 8px 20px;
+  transition: none !important;
+  font-size: 14px;
+  font-family: var(--heading-font);
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 0;
+  color: rgb(var(--very-dark-gray), 6);
+}
+.multiple-dropdown .dropdown-menu .dropdown-item:hover {
+  background: var(--primary-color);
+  color: hsl(var(--white)) !important;
+}
+.multiple-dropdown .dropdown-menu li {
+  position: relative;
+}
+.multiple-dropdown .dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color1);
+}
+.multiple-dropdown .dropdown-menu li:not(:last-child) .dropdown-item {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+  .multiple-dropdown .nav-link {
+    border-radius: 4px 4px 0 0 !important;
+  }
+  .multiple-dropdown:hover .nav-link {
+    color: var(--primary-color) !important;
+  }
+  .multiple-dropdown:hover .nav-link i {
+    transform: rotate(180deg);
+    color: var(--primary-color) !important;
+  }
+  .multiple-dropdown .dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    min-width: 270px;
+    display: block;
+    transition: var(--transition);
+  }
+  .multiple-dropdown .dropdown-menu > li:hover > .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .multiple-dropdown:hover > .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 991px) {
+  .multiple-dropdown .dropdown-menu {
+    box-shadow: none;
+  }
+  .multiple-dropdown .dropdown-menu .dropdown-item {
+    justify-content: center;
+  }
+  .multiple-dropdown .nav-link.show[aria-expanded=true] i {
+    transform: rotate(180deg);
+  }
+  .multiple-dropdown .dropdown-menu li:not(:last-child) {
+    border-bottom: none;
+  }
+}
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -3638,6 +3725,9 @@ Padding bottom
 .navbar.active .navbar-nav .nav-link::after {
   background-color: var(--heading-color);
 }
+.navbar.active .navbar-nav .nav-link i {
+  color: var(--heading-color);
+}
 .navbar.active .get-start-btn {
   background-color: var(--primary-color);
 }
@@ -3752,6 +3842,9 @@ Padding bottom
   .navbar .navbar-nav .nav-link {
     padding: 15px;
   }
+  .navbar .navbar-nav .nav-link i {
+    color: var(--heading-color);
+  }
   .navbar .nav-right {
     position: absolute;
     right: 65px;
@@ -3796,6 +3889,7 @@ Nav end
   height: 55px;
   display: flex;
   align-items: center;
+  z-index: 990;
 }
 .bottom-nav .nav-item .nav-link {
   color: var(--heading-color);
@@ -4063,6 +4157,7 @@ Category section end
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 .listing-box .content-area .address {
   font-size: 14px;
@@ -4498,6 +4593,7 @@ Testimonial end
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 .blog-box .blog-title {
   margin-bottom: 20px;
@@ -4506,6 +4602,7 @@ Testimonial end
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   line-height: 1.2;
   text-transform: capitalize;
 }
@@ -5426,6 +5523,7 @@ Login Signup end
   font-size: 18px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   transition: all ease 0.3s;
   -webkit-box-orient: vertical;
   overflow: hidden;

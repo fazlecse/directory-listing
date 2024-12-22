@@ -373,6 +373,7 @@ if ($("#telephone").length) {
     });
 }
 // International Telephone Input end
+
 // Dropdown select with Filter end
 if ($(".multiple-search-box").length) {
     function handleSelect(inputBox, searchInput, searchItem) {
